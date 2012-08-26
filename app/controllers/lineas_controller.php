@@ -3,12 +3,12 @@ class LineasController extends AppController {
 
 	var $name = 'Lineas';
 
-	function index() {
+	function cms_index() {
 		$this->Linea->recursive = 0;
 		$this->set('lineas', $this->paginate());
 	}
 
-	function view($id = null) {
+	function cms_view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid linea', true));
 			$this->redirect(array('action' => 'index'));
@@ -16,7 +16,7 @@ class LineasController extends AppController {
 		$this->set('linea', $this->Linea->read(null, $id));
 	}
 
-	function add() {
+	function cms_add() {
 		if (!empty($this->data)) {
 			$this->Linea->create();
 			if ($this->Linea->save($this->data)) {
@@ -28,7 +28,7 @@ class LineasController extends AppController {
 		}
 	}
 
-	function edit($id = null) {
+	function cms_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid linea', true));
 			$this->redirect(array('action' => 'index'));
@@ -46,7 +46,7 @@ class LineasController extends AppController {
 		}
 	}
 
-	function delete($id = null) {
+	function cms_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for linea', true));
 			$this->redirect(array('action'=>'index'));

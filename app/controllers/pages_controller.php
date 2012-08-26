@@ -91,4 +91,13 @@ class PagesController extends AppController {
 	function home(){
 
 	}
+	function nuestra_empresa(){
+
+	}
+	function clientes(){
+
+	}
+	function contact(){
+
+	}
 }

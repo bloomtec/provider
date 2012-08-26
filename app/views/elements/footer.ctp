@@ -20,7 +20,7 @@ a:active {
 
 <div style="height:53px; width:100%; font-size:14px; color:#999;"> 
   <p><br>
-    <a href="index.php">HOME</a> • <a href="nuestra_empresa.php">NUESTRA EMPRESA</a> • <a href="clientes.php">CLIENTES</a> • PRODUCTOS • <a href="contact.php">CONTACTENOS</a></p>
+    <a href="/">HOME</a> • <a href="nuestra_empresa">NUESTRA EMPRESA</a> • <a href="clientes">CLIENTES</a> • PRODUCTOS • <a href="contact">CONTACTENOS</a></p>
 </div>
 
 
