@@ -16,11 +16,7 @@
 
 <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"/>
 
-<script src="stuHover.js" type="text/javascript"></script>
-
-<link href="index.css" type="text/css" rel="stylesheet"></link>
-    <script type="text/javascript" src="jquery-1.4.2.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+<script src="/js/stuHover.js" type="text/javascript"></script>
 
 </head>
 
