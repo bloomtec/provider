@@ -23,7 +23,7 @@ class Linea extends AppModel {
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
+			'order' => 'Categoria.posicion asc',
 			'limit' => '',
 			'offset' => '',
 			'exclusive' => '',

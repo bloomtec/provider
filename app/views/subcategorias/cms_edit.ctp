@@ -1,18 +1,18 @@
 <div class="subcategorias form">
 <?php echo $this->Form->create('Subcategoria');?>
 	<fieldset>
- 		<legend><?php __('Edit Subcategoria'); ?></legend>
+ 		<legend><?php __('Modificar Subcategoria'); ?></legend>
 	<?php
 		echo "<div class='product_form'>";
 		echo $this->Form->input('id');
-		echo $this->Form->input('linea_id',array('id'=>'linea'));
-		echo $this->Form->input('categoria_id',array('id'=>'categoria'));
+		echo $this->Form->input('linea_id',array('id'=>'linea','value'=>$this -> data['Categoria']['linea_id']));
+		echo $this->Form->input('categoria_id',array('id'=>'categoria','last-selected'=>$this -> data['Subcategoria']['categoria_id']));
 		echo $this->Form->input('nombre');
-		echo $this->Form->input('image_path',array("options"=>$opcionesFotos,"class"=>"selectImagePath","fila"=>0));
+		//echo $this->Form->input('image_path',array("options"=>$opcionesFotos,"class"=>"selectImagePath","fila"=>0));
 		echo "</div>";
-		echo '<div class="product_image" id="0"> </div>';
-		echo '<div id="upload" path="subcategorias"></div>';
-		echo '<div style="clear:none"> </div>';
+		//echo '<div class="product_image" id="0"> </div>';
+		//echo '<div id="upload" path="subcategorias"></div>';
+		//echo '<div style="clear:none"> </div>';
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Guardar', true));?>

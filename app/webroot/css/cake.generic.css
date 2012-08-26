@@ -151,6 +151,9 @@ th {
 	text-align: left;
 	padding:4px;
 }
+th.actions{
+	text-align: center;
+}
 th a {
 	display: block;
 	padding: 2px 4px;

@@ -2,6 +2,12 @@
 class LineasController extends AppController {
 
 	var $name = 'Lineas';
+	 var $paginate = array(
+        'limit' => 10,        
+        'order' => array(
+            'Linea.posicion' => 'asc'
+        )
+    );
 
 	function cms_index() {
 		$this->Linea->recursive = 0;
@@ -15,7 +21,21 @@ class LineasController extends AppController {
 		}
 		$this->set('linea', $this->Linea->read(null, $id));
 	}
-
+		function cms_reOrder(){
+	  /* 
+	   * Ordena las categorias se une con el widget de sortable
+	
+	    * */
+	    foreach($this->data["Linea"] as $id=>$posicion){
+		    $this->Linea->id=$id;
+		    $this->Linea->saveField("posicion",$posicion);
+	    }
+	    
+	    echo "yes";
+	    Configure::write('debug', 0);   
+	    $this->autoRender = false;   
+	    exit(); 
+  	}
 	function cms_add() {
 		if (!empty($this->data)) {
 			$this->Linea->create();

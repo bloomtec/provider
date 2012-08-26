@@ -43,7 +43,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($this->Html->image("header.jpg"), "/",array('escape'=>false)); ?></h1>
+			<h1><?php echo $this->Html->link($this->Html->image("header.jpg"), "/cms",array('escape'=>false)); ?></h1>
 		</div>
 		<div id="content">
     <div id="logout"> <?php echo $this->Html->link("Salir",array("plugin"=>"autenticacion_simple","controller"=>"usuarios","action"=>"logout"));?></div>

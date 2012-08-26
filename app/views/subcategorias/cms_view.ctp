@@ -22,7 +22,7 @@
 	<h3><?php __('Opciones'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Modificar Subcategoría', true), array('action' => 'edit', $subcategoria['Subcategoria']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Borrar Subcategoría', true), array('action' => 'delete', $subcategoria['Subcategoria']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $subcategoria['Subcategoria']['id'])); ?> </li>
+		
 		<li><?php echo $this->Html->link(__('Ver Subcategorías', true), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Crear Subcategoría', true), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Ver Categorías', true), array('controller' => 'categorias', 'action' => 'index')); ?> </li>

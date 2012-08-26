@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var server='/cms/'
+	var server='/'
 	var path=$('#upload_input').attr('path');
 	var message=$('#upload_input').attr('message');
 	var controller=$('#upload_input').attr('controller');
