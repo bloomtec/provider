@@ -91,10 +91,10 @@ class ProductosController extends AppController {
 		}
 		if (!empty($this->data)) {
 			if ($this->Producto->save($this->data)) {
-				$this->Session->setFlash(__('The producto has been saved', true));
+				$this->Session->setFlash(__('Producto modificado', true));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The producto could not be saved. Please, try again.', true));
+				$this->Session->setFlash(__('No se pudo modificar el producto. Por favor, intente de nuevo.', true));
 			}
 		}
 		if (empty($this->data)) {
@@ -120,10 +120,10 @@ class ProductosController extends AppController {
 			$this->redirect(array('action'=>'index'));
 		}
 		if ($this->Producto->delete($id)) {
-			$this->Session->setFlash(__('Producto deleted', true));
+			$this->Session->setFlash(__('Producto borrado', true));
 			$this->redirect(array('action'=>'index'));
 		}
-		$this->Session->setFlash(__('Producto was not deleted', true));
+		$this->Session->setFlash(__('No se pudo borrar el producto. Por favor, intente de nuevo ', true));
 		$this->redirect(array('action' => 'index'));
 	}
 	
