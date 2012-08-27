@@ -33,5 +33,5 @@
 	</div>
 </div>
 <?php endif; ?>
-<?php debug($controller); ?>
-<?php debug($fotos); ?>
+<?php //debug($controller); ?>
+<?php //debug($fotos); ?>
