@@ -51,7 +51,7 @@
 <div style="width:400px; height:400px; background-color:none; float:left;">
   <table width="400" border="0" align="center">
     <tr>
-      <td width="34%" align="center"><form id="contact-form" method="post" onsubmit="return emailCheck(this.email.value);" action="/email">
+      <td width="34%" align="center"><form id="contact-form" method="post" onsubmit="return emailCheck(this.email.value);" action="/contact">
         <fieldset>
           <legend><strong>Datos Personales &raquo;</strong><br />
             </legend>
@@ -61,29 +61,29 @@
             <tr>
                 <td width="22%" align="left"><span style="color:#c00;">*</span>Nombre:</td>
                 <td><p>
-                  <input name="name" type="text" id="visitorname" title="Tu Nombre" size="15" />
+                  <input name="data[Email][name]" type="text" id="visitorname" title="Tu Nombre" size="15" />
                 </p></td>
               </tr>
               <tr>
                 <td align="left"><label for="visitorsurname"><span style="color:#c00;">*</span>Telefono: </label></td>
-                <td><input name="phone" type="text" id="phone" title="Tu telefono" size="15" /></td>
+                <td><input name="data[Email][phone]" type="text" id="phone" title="Tu telefono" size="15" /></td>
               </tr>
               <tr>
                 <td align="left"><span style="color:#c00;">*</span>Empresa</td>
-                <td><input name="empresa" type="text" id="empresa" title="Tu dirección de correo" value="" size="15" /></td>
+                <td><input name="data[Email][empresa]" type="text" id="empresa" title="Tu dirección de correo" value="" size="15" /></td>
               </tr>
               <tr>
                 <td align="left"><label for="url"> <span style="color:#c00;">*</span>Pais:</label></td>
-                <td><input name="pais" type="text" class="text" id="pais" title="Tu página web" size="15" /></td>
+                <td><input name="data[Email][pais]" type="text" class="text" id="pais" title="Tu página web" size="15" /></td>
               </tr>
               <tr>
                 <td align="left"><span style="color:#c00;">*</span>E-mail:</td>
-                <td><input name="email" type="text" class="text" id="visitormail" title="Tu número de telefono" size="15" /></td>
+                <td><input name="data[Email][email]" type="text" class="text" id="visitormail" title="Tu número de telefono" size="15" /></td>
               </tr>
               <tr>
                 <td align="left"><span style="color:#c00;">*</span>Asunto: </td>
                 <td><p>
-                  <input name="sub" type="text" id="subject" title="El motivo de tu mensaje" size="15" />
+                  <input name="data[Email][sub]" type="text" id="subject" title="El motivo de tu mensaje" size="15" />
                   </p>
                   </td>
               </tr>
@@ -92,25 +92,25 @@
             <tr>
               <td width="22%" align="left"><span style="color:#c00;">*</span>Apellido:</td>
               <td><p>
-                <input name="lastname" type="text" id="visitorlastname" title="Tu Apellido" size="15" />
+                <input name="data[Email][lastname]" type="text" id="visitorlastname" title="Tu Apellido" size="15" />
                 <br />
                 </p></td>
             </tr>
             <tr>
               <td align="left"><label for="visitorsurname"><span style="color:#c00;">*</span>Celular: </label></td>
-              <td><input name="cel" type="text" id="celular" title="Tu celular" size="15" /></td>
+              <td><input name="data[Email][cel]" type="text" id="celular" title="Tu celular" size="15" /></td>
             </tr>
             <tr>
               <td align="left"><span style="color:#c00;">*</span>Cargo:</td>
-              <td><input name="cargo" type="text" id="cargo" title="Tu dirección de correo" value="" size="15" /></td>
+              <td><input name="data[Email][cargo]" type="text" id="cargo" title="Tu dirección de correo" value="" size="15" /></td>
             </tr>
             <tr>
               <td align="left"><label for="url"> <span style="color:#c00;">*</span>Ciudad:</label></td>
-              <td><input name="city" type="text" class="text" id="ciudad" title="Tu página web" size="15" /></td>
+              <td><input name="data[Email][city]" type="text" class="text" id="ciudad" title="Tu página web" size="15" /></td>
             </tr>
             <tr>
               <td align="left">Pagina:</td>
-              <td><input name="url" type="text" class="text" id="url" title="Tu número de telefono" size="15" /></td>
+              <td><input name="data[Email][url]" type="text" class="text" id="url" title="Tu número de telefono" size="15" /></td>
             </tr>
           </table>
 </div>
@@ -130,7 +130,7 @@
 
                   * </span>Cuerpo del Mensaje:<br />
               </label>
-              <textarea name="text" id="notes2" rows="5" cols="48" onkeyup="val=this.value; if (val.length &gt; 1000) { alert('Lo siento, has sobrepasado el limite de 1000 caracteres'); this.value = val.substring(0,1000); }  this.form.count.value=1000-parseInt(this.value.length); "></textarea>
+              <textarea name="data[Email][text]" id="notes2" rows="5" cols="48" onkeyup="val=this.value; if (val.length &gt; 1000) { alert('Lo siento, has sobrepasado el limite de 1000 caracteres'); this.value = val.substring(0,1000); }  this.form.count.value=1000-parseInt(this.value.length); "></textarea>
               <br />
             </p>
             <p>
