@@ -1,4 +1,9 @@
 
 /app/tmp
+/app/tmp/*
+/app/tmp/models
+/app/tmp/models/*
+/app/tmp/persistent
+/app/tmp/persistent/*
 /plugins
 /vendors
