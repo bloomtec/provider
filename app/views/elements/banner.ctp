@@ -3,7 +3,7 @@
 	$fotos = array();
 	if(isset($controller) && !empty($controller)) {
 		$fotos = $this -> requestAction('/' . $controller . '/getBannerImages/' . $this -> params['pass'][0]);
-	} else {
+	} elseif(isset($page) && !empty($page)) {
 		$fotos = $this -> requestAction('/banners/get/' . $page);
 	}
 ?>
