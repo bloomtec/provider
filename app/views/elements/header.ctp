@@ -37,29 +37,23 @@ Buscar...
 	<li class="top"><a href="/" id="Inicio" class="inicio"><span>Inicio</span></a></li>
 	<li class="top"><a href="nuestra_empresa" id="nuestra_empresa" class="nuestra"><span>Nuestra Empresa</span></a></li>
    	<li class="top"><a href="clientes" id="clientes" class="clientes"><span>Clientes</span></a></li>
-	<li class="top"><a href="#" id="productos" class="productos"><span class="down">Productos</span></a>
-		<ul class="sub">
-			
-            <li><a href="#">Línea de Oficina</a>
+	  <li class="top"><a href="#" id="productos" class="productos"><span class="down">Productos</span></a>
+		  <ul class="sub">		
+      <?php $lineas = $this -> requestAction("/lineas/get");?>	
+      <?php foreach($lineas as $linea):?>
+        <li><a href="/linea/<?php echo $linea['Linea']['id'] ?>"><?php echo $linea['Linea']['nombre'] ?></a>
+          <?php if(isset($linea['Categoria']) && !empty($linea['Categoria']) ): ?>
             <ul>
-					<li><a href="#">Divisiones de oficina</a></li>
-                    <li><a href="#">Oficina abierta</a></li>
-                    <li><a href="#">Sistemas de archivo y almacenamiento</a></li>
-                    <li><a href="#">Accesorios</a></li>
-                    <li><a href="#">R.T.A. Listo para ensamblar</a></li>
-                    <li><a href="#">Mesas de conferencia</a></li>
+              <?php foreach($linea['Categoria'] as $sublinea): ?>
+                 <li><a href="/linea/<?php echo $linea['Linea']['id']?>/sublinea:<?php echo $sublinea['id'] ?>"><?php echo $sublinea['nombre'] ?></a></li>
+              <?php endforeach; ?>
             </ul>
-            </li>
-            
-            <li><a href="#">Línea de Áreas comunes, Auditorios y Escolar </a>
-            <ul>
-					<li><a href="#">Auditorios y teatros</a></li>
-					<li><a href="#">Areas comunes</a></li>
-                    <li><a href="#">Mobiliario escolar</a></li>
-            </ul>
-            </li>
-        </ul>
- 	<li class="top"><a href="contact" id="contacto" class="contacto"><span>Contáctenos</span></a></li>
+          <?php endif;?>
+        </li>
+      <?php endforeach; ?>        
+      </ul>
+    </li>
+ 	  <li class="top"><a href="contact" id="contacto" class="contacto"><span>Contáctenos</span></a></li>
 
 </ul>
 	

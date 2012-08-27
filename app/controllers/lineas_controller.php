@@ -9,6 +9,14 @@ class LineasController extends AppController {
         )
     );
 
+	 function get(){
+	 	return $this -> Linea -> find('all');
+	 }
+	 function view($id=null){
+	 	$this -> layout="front";
+	 	$this -> set('linea',$this -> Linea -> read(null, $id));
+	 	$this->set('productos', $this->Linea->Categoria->Producto->find('all'));
+	 }
 	function cms_index() {
 		$this->Linea->recursive = 0;
 		$this->set('lineas', $this->paginate());

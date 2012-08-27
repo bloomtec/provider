@@ -33,6 +33,7 @@
 	Router::connect('/nuestra_empresa', array('controller' => 'pages', 'action' => 'nuestra_empresa'));
 	Router::connect('/clientes', array('controller' => 'pages', 'action' => 'clientes'));
 	Router::connect('/contact', array('controller' => 'pages', 'action' => 'contact'));
+	Router::connect('/linea/*', array('controller' => 'lineas', 'action' => 'view'));
 	//Router::connect('/productos/index/*', array('action' => 'index'));
 
 	//Router::connect('/admin', array('controller' => 'documentos', 'action' => 'index', "plugin"=>"administracion_archivos","admin"=>true));

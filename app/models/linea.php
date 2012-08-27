@@ -29,6 +29,19 @@ class Linea extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Imagen' => array(
+			'className' => 'Imagen',
+			'foreignKey' => 'foreign_key',
+			'dependent' => true,
+			'conditions' => array('model_class' => 'Linea'),
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
 
