@@ -1,4 +1,5 @@
 <?php
+
 	$fotos = array();
 	if(isset($controller) && !empty($controller)) {
 		$fotos = $this -> requestAction('/' . $controller . '/getBannerImages/' . $this -> params['pass'][0]);
@@ -9,7 +10,7 @@
 <?php if(!empty($fotos)) : ?>
 <?php
 	echo $this -> Html -> css('estilos.css');
-	echo $this -> Html -> script("jquery-1.4.2.min.js");
+	echo $this -> Html -> script("jquery.min.js");
 	echo $this -> Html -> script("jquery.cycle.all.js");
 	echo $this -> Html -> script("ready.js");
 ?>
