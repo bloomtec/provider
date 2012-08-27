@@ -105,10 +105,10 @@ class PagesController extends AppController {
 		
 		if($this -> data) {			
 			// multiple recipients
-			$to  = 'juliodominguez@gmail.com'; //'oficina_principal@provider.com.co';
+			$to  = 'oficina_principal@provider.com.co'; //'oficina_principal@provider.com.co';
 			
 			// subject
-			$subject = 'Solicitud de contacto PROVIDER :: ' . $this -> data['Email']['sub'];
+			$subject = 'Sol. De Contacto :: ' . $this -> data['Email']['sub'];
 			
 			// message
 			$message = '
