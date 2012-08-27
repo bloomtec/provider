@@ -136,13 +136,13 @@
             <p>
               <label for="count">Caracteres disponibles:</label>
               <input type="text" name="count" id="counter" value="1000" size="7" />
-              <?php $text_len = preg_match_all('/./', $str, $dummy); ?>
+              <?php $str=0; $text_len = preg_match_all('/./', $str, $dummy); ?>
               <span style="color:#c00;"><em><br />
                 *</em></span><em>Campos Obligatorios</em></p>
             <p>&nbsp;</p>
             <p><span style="color:red;font-weight:bold;">
               <input type="submit" id="submit" name="send" value="Enviar »" title="Pulsa una vez para enviar el mensaje, y espera a la pantalla de confirmación" />
-            </span><span style="color:red;font-weight:bold;"><?php echo $error ?></span></p>
+            </span><span style="color:red;font-weight:bold;"><?php $error = ''; echo $error; ?></span></p>
           </fieldset>
       </form></td>
     </tr>

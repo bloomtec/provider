@@ -102,9 +102,88 @@ class PagesController extends AppController {
 	}
 
 	function contact() {
-		if($this -> data) {
-			$this -> autoRender = false;
-			debug($this -> data);
+		
+		if($this -> data) {			
+			// multiple recipients
+			$to  = 'juliodominguez@gmail.com'; //'oficina_principal@provider.com.co';
+			
+			// subject
+			$subject = 'Solicitud de contacto PROVIDER :: ' . $this -> data['Email']['sub'];
+			
+			// message
+			$message = '
+			<html>
+			<head>
+			  <title>Solicitud de contacto PROVIDER</title>
+			</head>
+			<body>
+			  <p>Datos de contacto</p>
+			  <table>
+			  	<tr>
+			    	<td>Asunto<td>
+			    	<td>' . $this -> data['Email']['sub'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Nombre<td>
+			    	<td>' . $this -> data['Email']['name'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Apellido<td>
+			    	<td>' . $this -> data['Email']['lastname'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Empresa<td>
+			    	<td>' . $this -> data['Email']['empresa'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Cargo<td>
+			    	<td>' . $this -> data['Email']['cargo'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Teléfono<td>
+			    	<td>' . $this -> data['Email']['phone'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Celular<td>
+			    	<td>' . $this -> data['Email']['cel'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Correo electrónico<td>
+			    	<td>' . $this -> data['Email']['email'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>País<td>
+			    	<td>' . $this -> data['Email']['pais'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Ciudad<td>
+			    	<td>' . $this -> data['Email']['city'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Página web<td>
+			    	<td>' . $this -> data['Email']['url'] . '</td>
+			    </tr>
+			    <tr>
+			    	<td>Página web<td>
+			    	<td>' . $this -> data['Email']['text'] . '</td>
+			    </tr>
+			  </table>
+			</body>
+			</html>
+			';
+			
+			// To send HTML mail, the Content-type header must be set
+			$headers  = 'MIME-Version: 1.0' . "\r\n";
+			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+			
+			// Additional headers
+			$headers .= 'To: Provider <oficina_principal@provider.com.co>' . "\r\n";
+			$headers .= 'From: Página de contacto PROVIDER <oficina_principal@provider.com.co>' . "\r\n";
+			
+			// Mail it
+			mail($to, $subject, $message, $headers);
+			$this -> Session -> setFlash(__('Se ha enviado la información de contacto', true));
+			$this -> redirect('/contact');
 		}
 	}
 
