@@ -45,7 +45,7 @@ Buscar...
           <?php if(isset($linea['Categoria']) && !empty($linea['Categoria']) ): ?>
             <ul>
               <?php foreach($linea['Categoria'] as $sublinea): ?>
-                 <li><a href="/linea/<?php echo $linea['Linea']['id']?>/sublinea:<?php echo $sublinea['id'] ?>"><?php echo $sublinea['nombre'] ?></a></li>
+                 <li><a href="/linea/<?php echo $linea['Linea']['id']?>/categoria:<?php echo $sublinea['id'] ?>"><?php echo $sublinea['nombre'] ?></a></li>
               <?php endforeach; ?>
             </ul>
           <?php endif;?>

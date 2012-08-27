@@ -13,9 +13,38 @@ class LineasController extends AppController {
 	 	return $this -> Linea -> find('all');
 	 }
 	 function view($id=null){
+	 	
 	 	$this -> layout="front";
+	 	$this -> Linea -> recursive=2;
+	 	$this -> Linea -> Categoria -> unbindModel(array('hasMany'=>array('Producto'),'belongsTo'=>array('Linea')));
 	 	$this -> set('linea',$this -> Linea -> read(null, $id));
-	 	$this->set('productos', $this->Linea->Categoria->Producto->find('all'));
+	 	$conditions=array();
+	 	if(!isset($this -> params['named']['categoria'])){
+	 		$categorias=$this -> Linea -> Categoria -> find('list',array(
+	 				'conditions'=>array('Categoria.linea_id'=>$id),
+	 				'fields'=>array('id','id')
+	 				));
+
+	 	}else{
+	 		$categorias=$this -> params['named']['categoria'];
+	 		$this -> Linea -> Categoria ->recursive =-1;
+	 		$this -> set('categoria',$this -> Linea -> Categoria -> read(null,$categorias));
+	 	}
+	 	$conditions['Producto.categoria_id']=$categorias;
+	 	if(isset($this -> params['named']['subcategoria'])){
+	 		$conditions['Producto.subcategoria_id']=$this -> params['named']['subcategoria'];
+	 		$this -> Linea -> Categoria -> Subcategoria ->recursive=-1;
+	 		$this -> set('subcategoria',$this -> Linea -> Categoria -> Subcategoria -> read(null,$this -> params['named']['subcategoria']));
+	 	}
+
+	 	$this->loadModel('Producto');
+	 	$this -> paginate=array(
+	 		'Producto' => array(
+	 			'limit'=>12,
+	 			'conditions'=>$conditions
+	 		)
+	 	);
+	 	$this->set('productos', $this->paginate('Producto'));
 	 }
 	function cms_index() {
 		$this->Linea->recursive = 0;

@@ -53,7 +53,7 @@ class Categoria extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		)
+	    )
 	);
 	
 	function afterSave($created){
