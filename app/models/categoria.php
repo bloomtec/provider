@@ -53,7 +53,20 @@ class Categoria extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-	    )
+	    ),
+	    'Imagene' => array(
+			'className' => 'Imagene',
+			'foreignKey' => 'foreign_key',
+			'dependent' => true,
+			'conditions' => array('model_class' => 'Categoria'),
+			'fields' => '',
+			'order' => array('posicion' => 'ASC'),
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
 	);
 	
 	function afterSave($created){

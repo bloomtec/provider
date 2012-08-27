@@ -1,19 +1,24 @@
+<?php
+	echo $this -> Html -> css('estilos.css');
+	echo $this -> Html -> script("jquery-1.4.2.min.js");
+	echo $this -> Html -> script("jquery.cycle.all.js");
+	echo $this -> Html -> script("ready.js");
+	
+	$fotos = array();
+	if(isset($controller) && !empty($controller)) {
+		$fotos = $this -> requestAction('/' . $controller . '/getBannerImages/' . $this -> params['pass'][0]);
+	} else {
+		$fotos = $this -> requestAction('/banners/get/' . $page);
+	}
+?>
+<?php if(!empty($fotos)) : ?>
 <div id="banner">
 	<div id="contenedor">
-		<?php
-			echo $this -> Html -> css('estilos.css');
-			echo $this -> Html -> script("jquery-1.4.2.min.js");
-			echo $this -> Html -> script("jquery.cycle.all.js");
-			echo $this -> Html -> script("ready.js");
-		?>
 		<div id="cycle">
-			<?php
-
-			$fotos = $this -> requestAction('/banners/get/' . $page);
+			<?php			
 			foreach ($fotos as $key => $foto) {
 				echo '<img src="img/uploads/' . $foto['path'] . ' " width="850" height="378">';
-			}
-			
+			}			
 			?>
 		</div>
 		<div id="overlay">
@@ -25,3 +30,6 @@
 		</div>
 	</div>
 </div>
+<?php endif; ?>
+<?php //debug($controller); ?>
+<?php //debug($fotos); ?>

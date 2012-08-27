@@ -19,9 +19,9 @@
 <div class="actions">
 	<h3><?php __('Opciones'); ?></h3>
 	<ul>
-
 		<li><?php echo $this->Html->link(__('Ver Categorías', true), array('action' => 'index'));?></li>
 		<li><?php echo $this->Html->link(__('Ver Subcategorías', true), array('controller' => 'subcategorias', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Crear Subcategoría', true), array('controller' => 'subcategorias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this -> Html -> link(__('Agregar Imagen', true), array('controller' => 'imagenes', 'action' => 'add', 'Categoria', $this -> data['Categoria']['id'])); ?> </li>
 	</ul>
 </div>
