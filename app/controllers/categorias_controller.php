@@ -3,6 +3,16 @@ class CategoriasController extends AppController {
 
 	var $name = 'Categorias';
 	var $paginate = array('limit' => 10, 'order' => array('Categoria.posicion' => 'asc'));
+	
+	function getBannerImages($id = null) {
+		$this -> Categoria -> recursive = 1;
+		if ($id) {
+			$galeria = $this -> Categoria -> findById($id);
+			return $galeria['Imagene'];
+		} else {
+			return false;
+		}
+	}
 
 	function beforeFilter() {
 		parent::beforeFilter();

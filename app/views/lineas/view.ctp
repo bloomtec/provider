@@ -38,7 +38,13 @@
 			<div id="content">
 				<?php echo $this -> element("header"); //debug($this -> params); ?>
 
-				<?php echo $this -> element('banner', array('controller' => 'lineas')); ?>
+				<?php
+					if(isset($this -> params['named']) && !empty($this -> params['named'])) {
+						echo $this -> element('banner', array('controller' => 'lineas', key($this -> params['named']) => $this -> params['named'][key($this -> params['named'])]));
+					} else {
+						echo $this -> element('banner', array('controller' => 'lineas'));
+					}
+				?>
 
 				<div id="banner_underline"></div>
 

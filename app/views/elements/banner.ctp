@@ -1,8 +1,10 @@
 <?php
 
 	$fotos = array();
-	if(isset($controller) && !empty($controller)) {
+	if(isset($controller) && !empty($controller) && !isset($categoria)) {
 		$fotos = $this -> requestAction('/' . $controller . '/getBannerImages/' . $this -> params['pass'][0]);
+	} elseif(isset($controller) && !empty($controller) && isset($categoria) && !empty($categoria)) {
+		$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria);
 	} elseif(isset($page) && !empty($page)) {
 		$fotos = $this -> requestAction('/banners/get/' . $page);
 	}

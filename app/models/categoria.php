@@ -17,7 +17,17 @@ class Categoria extends AppModel {
 			),
 		),
 	);
+	
+	function afterSave($created){
+		if($created){
+			$subcategoria["Subcategoria"]["nombre"]="ninguna";
+			$subcategoria["Subcategoria"]["categoria_id"]=$this->id;
+			$this -> Subcategoria -> save($subcategoria);
+		}
+	}
+	
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
+	
 	var $belongsTo = array(
 		'Linea' => array(
 			'className' => 'Linea',
@@ -27,6 +37,7 @@ class Categoria extends AppModel {
 			'order' => ''
 		)
 	);
+	
 	var $hasMany = array(
 		'Subcategoria' => array(
 			'className' => 'Subcategoria',
@@ -54,7 +65,7 @@ class Categoria extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 	    ),
-	    'Imagene' => array(
+		'Imagene' => array(
 			'className' => 'Imagene',
 			'foreignKey' => 'foreign_key',
 			'dependent' => true,
@@ -69,12 +80,5 @@ class Categoria extends AppModel {
 		)
 	);
 	
-	function afterSave($created){
-		if($created){
-			$subcategoria["Subcategoria"]["nombre"]="ninguna";
-			$subcategoria["Subcategoria"]["categoria_id"]=$this->id;
-			$this -> Subcategoria -> save($subcategoria);
-		}
-	}
 }
 ?>
