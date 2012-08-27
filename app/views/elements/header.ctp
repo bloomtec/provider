@@ -39,7 +39,7 @@ Buscar...
    	<li class="top"><a href="clientes" id="clientes" class="clientes"><span>Clientes</span></a></li>
 	  <li class="top"><a href="#" id="productos" class="productos"><span class="down">Productos</span></a>
 		  <ul class="sub">		
-      <?php $lineas = $this -> requestAction("/lineas/get");?>	
+      <?php $lineas = $this -> requestAction("/lineas/get"); ?>	
       <?php foreach($lineas as $linea):?>
         <li><a href="/linea/<?php echo $linea['Linea']['id'] ?>"><?php echo $linea['Linea']['nombre'] ?></a>
           <?php if(isset($linea['Categoria']) && !empty($linea['Categoria']) ): ?>
@@ -48,7 +48,7 @@ Buscar...
                  <li><a href="/linea/<?php echo $linea['Linea']['id']?>/categoria:<?php echo $sublinea['id'] ?>"><?php echo $sublinea['nombre'] ?></a></li>
               <?php endforeach; ?>
             </ul>
-          <?php endif;?>
+          <?php endif; ?>
         </li>
       <?php endforeach; ?>        
       </ul>

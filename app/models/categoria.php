@@ -1,7 +1,10 @@
 <?php
 class Categoria extends AppModel {
+	
 	var $name = 'Categoria';
+	
 	var $displayField = 'nombre';
+	
 	var $validate = array(
 		'nombre' => array(
 			'notempty' => array(
@@ -39,24 +42,38 @@ class Categoria extends AppModel {
 			'counterQuery' => ''
 		),
 		'Producto' => array(
-	      'className' => 'Producto',
-	      'foreignKey' => 'categoria_id',
-	      'dependent' => false,
-	      'conditions' => '',
-	      'fields' => '',
-	      'order' => '',
-	      'limit' => '',
-	      'offset' => '',
-	      'exclusive' => '',
-	      'finderQuery' => '',
-	      'counterQuery' => ''
-	    )
+			'className' => 'Producto',
+			'foreignKey' => 'categoria_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+	    ),
+	    'Imagene' => array(
+			'className' => 'Imagene',
+			'foreignKey' => 'foreign_key',
+			'dependent' => true,
+			'conditions' => array('model_class' => 'Categoria'),
+			'fields' => '',
+			'order' => array('posicion' => 'ASC'),
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
 	);
+	
 	function afterSave($created){
 		if($created){
 			$subcategoria["Subcategoria"]["nombre"]="ninguna";
 			$subcategoria["Subcategoria"]["categoria_id"]=$this->id;
-			$this->Subcategoria->save($subcategoria);
+			$this -> Subcategoria -> save($subcategoria);
 		}
 	}
 }

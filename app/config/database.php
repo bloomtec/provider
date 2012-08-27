@@ -77,11 +77,12 @@ class DATABASE_CONFIG {
 		'driver' => 'mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'root',
-		'password' => '',
+		'login' => 'bloomweb',
+		'password' => 'rr40r900343',
 		'database' => 'provide2_provider',
 		'prefix' => '',
 	);
+	
 	var $production = array(
 		'driver' => 'mysql',
 		'persistent' => false,
@@ -91,6 +92,7 @@ class DATABASE_CONFIG {
 		'database' => 'provide2_provider',
 		'prefix' => '',
 	);
+	
 	var $test = array(
 		'driver' => 'mysql',
 		'persistent' => false,
@@ -100,4 +102,5 @@ class DATABASE_CONFIG {
 		'database' => 'test_database_name',
 		'prefix' => '',
 	);
+	
 }

@@ -1,4 +1,23 @@
 
 /app/tmp
+/app/tmp/*
+/app/tmp/models
+/app/tmp/models/*
+/app/tmp/persistent
+/app/tmp/persistent/*
 /plugins
 /vendors
+/app/webroot/img/uploads
+/app/webroot/img/uploads/*
+/app/webroot/img/uploads/50x50
+/app/webroot/img/uploads/50x50/*
+/app/webroot/img/uploads/100x100
+/app/webroot/img/uploads/100x100/*
+/app/webroot/img/uploads/150x150
+/app/webroot/img/uploads/150x150/*
+/app/webroot/img/uploads/215x215
+/app/webroot/img/uploads/215x215/*
+/app/webroot/img/uploads/360x360
+/app/webroot/img/uploads/360x360/*
+/app/webroot/img/uploads/750x750
+/app/webroot/img/uploads/750x750/*
