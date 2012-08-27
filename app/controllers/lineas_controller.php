@@ -24,18 +24,23 @@ class LineasController extends AppController {
 	 				'conditions'=>array('Categoria.linea_id'=>$id),
 	 				'fields'=>array('id','id')
 	 				));
+
 	 	}else{
 	 		$categorias=$this -> params['named']['categoria'];
+	 		$this -> Linea -> Categoria ->recursive =-1;
+	 		$this -> set('categoria',$this -> Linea -> Categoria -> read(null,$categorias));
 	 	}
 	 	$conditions['Producto.categoria_id']=$categorias;
 	 	if(isset($this -> params['named']['subcategoria'])){
 	 		$conditions['Producto.subcategoria_id']=$this -> params['named']['subcategoria'];
+	 		$this -> Linea -> Categoria -> Subcategoria ->recursive=-1;
+	 		$this -> set('subcategoria',$this -> Linea -> Categoria -> Subcategoria -> read(null,$this -> params['named']['subcategoria']));
 	 	}
 
 	 	$this->loadModel('Producto');
 	 	$this -> paginate=array(
 	 		'Producto' => array(
-	 			'limit'=>16,
+	 			'limit'=>12,
 	 			'conditions'=>$conditions
 	 		)
 	 	);

@@ -34,7 +34,7 @@ a:active {
 <script src="/js/stuHover.js" type="text/javascript"></script>
 <script src="/js/jquery.min.js" type="text/javascript"></script>
 </head>
-<body id="linea">
+<body id="producto">
 	<div id="conteiner" style="height:894px">
 		<div id="content">
 			<?php echo $this -> element("header"); ?>
@@ -48,10 +48,10 @@ a:active {
 			<div id="contenido" style="min-height:372px;">
 
 				<div id="contenido_linea">
-
 				 <?php echo $linea['Linea']['nombre'];?> 
-				  <?php if(isset($categoria)) echo " -> ".$categoria['Categoria']['nombre'] ?>
-				  <?php if(isset($subcategoria)) echo " -> ".$subcategoria['Subcategoria']['nombre'] ?>
+				  <?php if(isset($categoria)) echo " -> ".$categoria['Categoria']['nombre']; ?>
+				  <?php if(isset($subcategoria)) echo " -> ".$subcategoria['Subcategoria']['nombre']; ?>
+				  <?php echo " -> ".$producto['Producto']['nombre']; ?>
 				</div>
 
 				<div id="contenido_sublinea"> </div>
@@ -77,24 +77,31 @@ a:active {
 				<div id="subcategorias">
 				</div>
 
-					<?php echo $this -> element('listado-productos');?>
-					<div style='margin-top:1.5em;'>
-					<p class='paginator'>
-						<?php
-						echo $this->Paginator->counter(array(
-						'format' => __('Página %page% de %pages%,  %count% registros totales', true)
-						));
-						?>
+				<?php echo $this -> element('listado-productos');?>
+				<div class="view-producto">
+					<img src="/img/<?php echo $producto['Producto']['image_path']?>" /> </a>
+					<h1> <?php echo $producto['Producto']['nombre']; ?> </h1>
+					
+					<h2> Beneficios </h2>
+					<p>
+						<?php echo $producto['Producto']['beneficios']; ?> 
+					</p>
+					<h2> Acabados </h2>
+					<p>
+						<?php echo $producto['Producto']['acabados']; ?> 
+					</p>
+					<h2> Colores </h2>
+					<p>
+						<?php echo $producto['Producto']['colores']; ?> 
+					</p>
+					<h2> Materiales </h2>
+					<p>
+						<?php echo $producto['Producto']['materiales']; ?> 
 					</p>
 
-					<div class="paging">
-						<?php echo $this->Paginator->prev('<< ' . __('anterior', true), array(), null, array('class'=>'disabled'));?>
-					 | 	<?php echo $this->Paginator->numbers();?>
-					 |
-						<?php echo $this->Paginator->next(__('siguiente', true) . ' >>', array(), null, array('class' => 'disabled'));?>
-					</div>
-					<div style='clear:both;'></div>
 				</div>
+				<div style="clear:both;"></div>
+		
 			</div>
 		</div>
 		<div style='clear:both;'></div>

@@ -2,10 +2,41 @@
 class ProductosController extends AppController {
 
 	var $name = 'Productos';
-  function beforeFilter(){
-    parent::beforeFilter();
-    $this->Auth->allow("info");
-  }
+
+	function beforeFilter(){
+	    parent::beforeFilter();
+	    $this->Auth->allow("info");
+	}
+
+	function view($id = null) {
+		$this -> layout="front";
+		if (!$id) {
+			$this->Session->setFlash(__('Invalid producto', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		$producto =$this->Producto->read(null, $id);
+		$this -> Producto -> Categoria -> recursive = -1;
+		$categoria = $this -> Producto -> Categoria -> read(null,$producto['Producto']['categoria_id']);
+
+		$this -> Producto -> Categoria -> Subcategoria -> recursive = -1;
+		$subcategoria = $this -> Producto -> Categoria -> Subcategoria -> read(null,$producto['Producto']['subcategoria_id']);
+		$this -> Producto -> Categoria -> Linea -> recursive=2;
+		$linea = $this -> Producto -> Categoria -> Linea -> read(null,$categoria['Categoria']['linea_id']);
+		$this -> set(compact('categoria','subcategoria','linea'));
+		$this->set('producto', $producto);
+		//$conditions['Producto.subcategoria_id']=$subcategoria['Subcategoria']['id'];
+		$conditions['Producto.categoria_id']=$categoria['Categoria']['id'];
+	 	
+	 	$this->loadModel('Producto');
+	 	$this -> paginate=array(
+	 		'Producto' => array(
+	 			'limit'=>12,
+	 			'conditions'=>$conditions
+	 		)
+	 	);
+	 	$this->set('productos', $this->paginate('Producto'));
+	}
+
 	function cms_index() {
 		$this->Producto->recursive = 0;
 		
