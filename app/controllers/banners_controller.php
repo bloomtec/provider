@@ -3,7 +3,7 @@ class BannersController extends AppController {
 
 	var $name = 'Banners';
 	
-	function get($page) {
+	function get($page = null) {
 		if($page) {
 			$banner = $this -> Banner -> findByNombre($page); //debug($banner['Imagene']);
 			return $banner['Imagene'];

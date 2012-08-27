@@ -8,7 +8,7 @@ class ProductosController extends AppController {
 		$this -> Auth -> allow("info");
 	}
 	
-	function getBannerImages($id) {
+	function getBannerImages($id = null) {
 		if ($id) {
 			$galeria = $this -> Producto -> findById($id);
 			return $galeria['Imagene'];

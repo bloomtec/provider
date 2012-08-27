@@ -8,7 +8,7 @@ class LineasController extends AppController {
 		return $this -> Linea -> find('all');
 	}
 
-	function getBannerImages($id) {
+	function getBannerImages($id = null) {
 		if ($id) {
 			$galeria = $this -> Linea -> findById($id);
 			return $galeria['Imagene'];
