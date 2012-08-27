@@ -19,19 +19,19 @@
 		<div id="cycle">
 			<?php			
 			foreach ($fotos as $key => $foto) {
-				echo '<img src="img/uploads/' . $foto['path'] . ' " width="850" height="378">';
+				echo '<img src="/img/uploads/' . $foto['path'] . ' " width="850" height="378">';
 			}			
 			?>
 		</div>
 		<div id="overlay">
-			<div class="button" id="banner-prev"><img src="img/banners/prev.png" width="43" height="92" alt="Anterior">
+			<div class="button" id="banner-prev"><img src="/img/banners/prev.png" width="43" height="92" alt="Anterior">
 			</div>
-			<div class="button" id="banner-next"><img src="img/banners/next.png" width="43" height="92" alt="Siguiente">
+			<div class="button" id="banner-next"><img src="/img/banners/next.png" width="43" height="92" alt="Siguiente">
 			</div>
 			<div id="banner-nav"></div>
 		</div>
 	</div>
 </div>
 <?php endif; ?>
-<?php //debug($controller); ?>
-<?php //debug($fotos); ?>
+<?php debug($controller); ?>
+<?php debug($fotos); ?>

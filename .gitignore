@@ -21,3 +21,4 @@
 /app/webroot/img/uploads/360x360/*
 /app/webroot/img/uploads/750x750
 /app/webroot/img/uploads/750x750/*
+/app/config/database.php
