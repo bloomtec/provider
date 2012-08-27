@@ -66,7 +66,7 @@
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
+		<li><?php echo $this -> Html -> link(__('Agregar Imagen', true), array('controller' => 'imagenes', 'action' => 'add', 'Banner', $this -> data['Banner']['id'])); ?> </li>
 		<li><?php echo $this -> Html -> link(__('Volver', true), array('action' => 'index')); ?></li>
-		<li><?php echo $this -> Html -> link(__('Agregar Imagenes', true), array('controller' => 'imagenes', 'action' => 'add', 'Banner', $this -> data['Banner']['id'])); ?> </li>
 	</ul>
 </div>

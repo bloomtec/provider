@@ -17,6 +17,6 @@
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Volver', true), array('controller' => $controller, 'action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('Volver', true), array('controller' => $controller, 'action' => 'edit', $this -> params['pass'][1]));?></li>
 	</ul>
 </div>

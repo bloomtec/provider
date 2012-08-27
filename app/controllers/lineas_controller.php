@@ -72,6 +72,7 @@ class LineasController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Linea->read(null, $id);
 		}
+		$this -> set('controller', 'banners');
 	}
 
 	function cms_delete($id = null) {

@@ -45,6 +45,8 @@ $(document).ready(function() {
 				if(result.success) {
 					$("#ImagePreviewContainer").empty();
 					$("#ImagePreviewContainer").html('<img src="/img/uploads/' + result.archivo + '" />');
+				} else {
+					alert('Ha ocurrido un error al subir la imagen. Intente con otro nombre de archivo.');
 				}
 			});
 		}
