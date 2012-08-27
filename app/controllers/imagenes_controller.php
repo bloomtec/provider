@@ -83,9 +83,9 @@ class ImagenesController extends AppController {
 			$this -> Session -> setFlash(__('Imagen no válida', true));
 		}
 		if ($this->Imagene -> delete($id)) {
-			$this->Session->setFlash(__('Categoría borrada', true));
+			$this->Session->setFlash(__('Se eliminó la imagen', true));
 		} else {
-			$this->Session->setFlash(__('No se pudo borrar la categoría. Por favor, intente de nuevo.', true));
+			$this->Session->setFlash(__('No se pudo eliminar la imagen. Por favor, intente de nuevo.', true));
 		}
 		$this->redirect($this -> referer());
 	}
