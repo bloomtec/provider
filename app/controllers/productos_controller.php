@@ -6,7 +6,7 @@ class ProductosController extends AppController {
     parent::beforeFilter();
     $this->Auth->allow("info");
   }
-	function index() {
+	function cms_index() {
 		$this->Producto->recursive = 0;
 		
 		$linea = (isset($this->params['named']['linea']) && !empty($this->params['named']['linea'])) ? $this->params['named']['linea'] : null;
@@ -41,7 +41,7 @@ class ProductosController extends AppController {
     exit(); 
   }
 
-	function view($id = null) {
+	function cms_view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid producto', true));
 			$this->redirect(array('action' => 'index'));
@@ -49,7 +49,7 @@ class ProductosController extends AppController {
 		$this->set('producto', $this->Producto->read(null, $id));
 	}
 
-	function add() {
+	function cms_add() {
 	//debug($this->data);
 		if (!empty($this->data)) {
 		//$productosGuardados=0;
@@ -84,17 +84,17 @@ class ProductosController extends AppController {
 		$this->set(compact('categorias','fotos','opcionesFotos','lineas'));
 	}
 
-	function edit($id = null) {
+	function cms_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid producto', true));
 			$this->redirect(array('action' => 'index'));
 		}
 		if (!empty($this->data)) {
 			if ($this->Producto->save($this->data)) {
-				$this->Session->setFlash(__('The producto has been saved', true));
+				$this->Session->setFlash(__('Producto modificado', true));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The producto could not be saved. Please, try again.', true));
+				$this->Session->setFlash(__('No se pudo modificar el producto. Por favor, intente de nuevo.', true));
 			}
 		}
 		if (empty($this->data)) {
@@ -114,16 +114,16 @@ class ProductosController extends AppController {
 		
 	}
 
-	function delete($id = null) {
+	function cms_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for producto', true));
 			$this->redirect(array('action'=>'index'));
 		}
 		if ($this->Producto->delete($id)) {
-			$this->Session->setFlash(__('Producto deleted', true));
+			$this->Session->setFlash(__('Producto borrado', true));
 			$this->redirect(array('action'=>'index'));
 		}
-		$this->Session->setFlash(__('Producto was not deleted', true));
+		$this->Session->setFlash(__('No se pudo borrar el producto. Por favor, intente de nuevo ', true));
 		$this->redirect(array('action' => 'index'));
 	}
 	
@@ -143,7 +143,7 @@ class ProductosController extends AppController {
 	    $this->autoRender = false;   
 	    exit();
 	}
-	function reOrderEnCategoria(){
+	function cms_reOrderEnCategoria(){
   /* 
    * Ordena los producto en una categoría
 
@@ -158,7 +158,7 @@ class ProductosController extends AppController {
     $this->autoRender = false;   
     exit(); 
 	}
-	function reOrderEnSubcategoria(){
+	function cms_reOrderEnSubcategoria(){
   /* 
    * Ordena los producto en una subcategoría
 

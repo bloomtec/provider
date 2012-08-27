@@ -194,6 +194,7 @@
 2012-08-26 21:20:48 Debug: Notice (8): Undefined variable: error in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 148]
 2012-08-26 21:23:28 Debug: Notice (8): Undefined variable: str in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 142]
 2012-08-26 21:23:28 Debug: Notice (8): Undefined variable: error in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 148]
+<<<<<<< HEAD
 2012-08-26 19:09:40 Notice: Notice (8): Undefined index: folder in [/var/www/provider/app/views/elements/banner.ctp, line 5]
 2012-08-26 19:52:01 Notice: Notice (8): Undefined variable: fotos in [/var/www/provider/app/views/elements/banner.ctp, line 5]
 2012-08-26 19:52:07 Notice: Notice (8): Undefined variable: fotos in [/var/www/provider/app/views/elements/banner.ctp, line 5]
@@ -219,3 +220,7 @@
 2012-08-26 19:52:47 Notice: Notice (8): Undefined variable: fotos in [/var/www/provider/app/views/elements/banner.ctp, line 5]
 2012-08-26 19:52:47 Notice: Notice (8): Undefined variable: str in [/var/www/provider/app/views/pages/contact.ctp, line 142]
 2012-08-26 19:52:47 Notice: Notice (8): Undefined variable: error in [/var/www/provider/app/views/pages/contact.ctp, line 148]
+=======
+2012-08-26 23:55:04 Debug: Notice (8): Uninitialized string offset: 0 in [D:\xampp\htdocs\provider\cake\libs\view\helpers\html.php, line 608]
+2012-08-27 00:51:20 Debug: Notice (8): Undefined index: Categora in [D:\xampp\htdocs\provider\app\views\subcategorias\cms_edit.ctp, line 8]
+>>>>>>> af7a52bcd7ea1f610a95ec7a0e1cc50422df7cc4

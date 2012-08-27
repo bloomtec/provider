@@ -8,10 +8,10 @@
 		<table cellpadding = "0" cellspacing = "0">
 			<tr>
 				<th><?php __('Id');?></th>
-				<th><?php __('Linea Id');?></th>
+				
 				<th><?php __('Posicion');?></th>
 				<th><?php __('Nombre');?></th>
-				<th><?php __('Image Path');?></th>
+				<!--<th><?php // __('Image Path');?></th> -->
 				<th class="actions"><?php __('Actions');?></th>
 			</tr>
 			<?php
@@ -24,13 +24,12 @@ $class = ' class="altrow"';
 			?>
 			<tr<?php echo $class;?>>
 				<td><?php echo $categoria['id'];?></td>
-				<td><?php echo $categoria['linea_id'];?></td>
 				<td><?php echo $categoria['posicion'];?></td>
 				<td><?php echo $categoria['nombre'];?></td>
-				<td><?php echo $categoria['image_path'];?></td>
+				<!--<td><?php //echo $categoria['image_path'];?></td>-->
 				<td class="actions"><?php echo $this -> Html -> link(__('View', true), array('controller' => 'categorias', 'action' => 'view', $categoria['id']));?>
-				<?php echo $this -> Html -> link(__('Edit', true), array('controller' => 'categorias', 'action' => 'edit', $categoria['id']));?>
-				<?php echo $this -> Html -> link(__('Delete', true), array('controller' => 'categorias', 'action' => 'delete', $categoria['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $categoria['id']));?></td>
+				<?php echo $this -> Html -> link(__('Modificar', true), array('controller' => 'categorias', 'action' => 'edit', $categoria['id']));?>
+				<?php echo $this -> Html -> link(__('Borrar', true), array('controller' => 'categorias', 'action' => 'delete', $categoria['id']), null, sprintf(__('Está seguro?', true), $categoria['id']));?></td>
 				</tr> <?php endforeach;?>
 		</table>
 		<?php endif;?>

@@ -937,8 +937,14 @@
 2012-08-26 21:12:01 Warning: Warning (2): file_get_contents(header.php) [<a href='http://php.net/function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 29]
 2012-08-26 21:12:01 Warning: Warning (2): file_get_contents(redes_sociales.php) [<a href='http://php.net/function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 44]
 2012-08-26 21:12:02 Warning: Warning (2): file_get_contents(footer.php) [<a href='http://php.net/function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 205]
+<<<<<<< HEAD
 2012-08-26 15:22:36 Warning: Warning (2): mysql_connect() [http://php.net/function.mysql-connect]: Access denied for user 'root'@'localhost' (using password: NO) in [/var/www/provider/cake/libs/model/datasources/dbo/dbo_mysql.php, line 540]
 2012-08-26 15:22:36 Warning: Warning (2): mysql_select_db() expects parameter 2 to be resource, boolean given in [/var/www/provider/cake/libs/model/datasources/dbo/dbo_mysql.php, line 546]
 2012-08-26 15:22:36 Warning: Warning (2): mysql_get_server_info() expects parameter 1 to be resource, boolean given in [/var/www/provider/cake/libs/model/datasources/dbo/dbo_mysql.php, line 554]
 2012-08-26 15:22:36 Warning: Warning (2): mysql_query() expects parameter 2 to be resource, boolean given in [/var/www/provider/cake/libs/model/datasources/dbo/dbo_mysql.php, line 588]
 2012-08-26 15:22:36 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/provider/cake/libs/debugger.php:673) in [/var/www/provider/cake/libs/controller/controller.php, line 746]
+=======
+2012-08-26 22:32:41 Warning: Warning (2): fopen(D:\xampp\htdocs\provider\app\tmp\cache\models\cake_model_default_autenticaciones) [<a href='http://php.net/function.fopen'>function.fopen</a>]: failed to open stream: Invalid argument in [D:\xampp\htdocs\provider\cake\libs\file.php, line 154]
+2012-08-27 00:39:37 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Subcategoria.posicion' in 'order clause'</span> in [D:\xampp\htdocs\provider\cake\libs\model\datasources\dbo_source.php, line 681]
+2012-08-27 00:39:37 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\xampp\htdocs\provider\cake\libs\model\datasources\dbo_source.php, line 1091]
+>>>>>>> af7a52bcd7ea1f610a95ec7a0e1cc50422df7cc4

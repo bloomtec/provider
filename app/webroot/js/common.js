@@ -1,4 +1,4 @@
-var server="/cms/";
+var server="/";
 $(document).ready(function(){
 	
 	//Actualizacion Subcategorias

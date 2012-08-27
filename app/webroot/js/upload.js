@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	var server = '/cms/'
-	var path = $('#upload').attr('path');
-	var message = $('#upload').attr('message');
-	var controller = $('#upload').attr('controller');
-	var action = $('#upload').attr('action');
+	var server='/'
+	var path=$('#upload').attr('path');
+	var message=$('#upload').attr('message');
+	var controller=$('#upload').attr('controller');
+	var action=$('#upload').attr('action');
 
 	$('#upload').uploadify({
 		'uploader' : server + 'swf/uploadify.swf',
