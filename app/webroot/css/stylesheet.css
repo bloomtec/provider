@@ -569,3 +569,30 @@ li.producto span{
 	display: block;
 	height: 2.5em;
 }
+.paginator{
+	float:left;
+	margin-left: 1em;
+}
+.paging{
+	float:right;
+	margin-right: 1em;
+}
+
+li.categoria{
+	
+	list-style: none;
+	display: inline;
+}
+.subcategorias{
+	position: absolute;
+	top: 1.5em;
+	display: none;
+	width: 850px;
+}
+li.categoria:hover .subcategorias{
+	display: block;
+
+}
+#contenido_categoria{
+	position: relative;
+}

@@ -34,44 +34,46 @@ a:active {
 <script src="/js/stuHover.js" type="text/javascript"></script>
 
 </head>
-
 <body>
-<div id="conteiner" style="height:894px">
-<div id="content">
-<?php echo $this -> element("header"); ?>
+	<div id="conteiner" style="height:894px">
+		<div id="content">
+			<?php echo $this -> element("header"); ?>
 
-<?php echo $this -> element('banner');?>
+			<?php echo $this -> element('banner');?>
 
-<div id="banner_underline"> </div>
+			<div id="banner_underline"> </div>
 
-<?php echo $this -> element("redes_sociales"); ?>
+			<?php echo $this -> element("redes_sociales"); ?>
 
-<div id="contenido" style="min-height:372px;">
+			<div id="contenido" style="min-height:372px;">
 
-	<div id="contenido_linea"> <?php echo $linea['Linea']['nombre'];?> </div>
+				<div id="contenido_linea"> <?php echo $linea['Linea']['nombre'];?> </div>
 
-	<div id="contenido_sublinea"> </div>
+				<div id="contenido_sublinea"> </div>
 
-	<div id="contenido_categoria"> 
-		<?php foreach($linea['Categoria'] as $categoria):?>
-			<a href="/lineas/view/<?php echo $linea['Linea']['id'] ?>">● Areas comunes</a> 
-		<?php endforeach;?>
-		
-		
+				<ul id="contenido_categoria"> 
+					<?php foreach($linea['Categoria'] as $categoria):?>
+						<li class='categoria'>
+							<a  href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $categoria['id']?>">
+								● <?php echo $categoria['nombre']?>
+							</a> 
+							<div class="subcategorias">
+								<?php foreach($categoria['Subcategoria'] as $subcategoria):?>
+								<a href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $categoria['id']?>/subcategoria:<?php echo $subcategoria['id']?>">	●<?php echo $subcategoria['nombre']?> </a>
+							<?php endforeach;?>
+							</div>
+						</li>
+					<?php endforeach;?>
+					
+					
+				</ul>
+
+				<?php echo $this -> element('listado-productos');?>
+			</div>
+		</div>
+		<div style='clear:both;'></div>
+		<?php echo $this -> element("footer"); ?>
+
 	</div>
-
-	<?php echo $this -> element('listado-productos');?>
-
-
-</div>
-
-</div>
-
-<?php echo $this -> element("footer"); ?>
-
-
-</div>
-
-
 </body>
 </html>

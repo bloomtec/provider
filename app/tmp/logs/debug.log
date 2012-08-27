@@ -199,3 +199,5 @@
 2012-08-27 05:00:58 Debug: Notice (8): Undefined variable: productos in [D:\xampp\htdocs\provider\app\views\elements\listado-productos.ctp, line 2]
 2012-08-27 05:02:18 Debug: Notice (8): Undefined variable: productos in [D:\xampp\htdocs\provider\app\views\elements\listado-productos.ctp, line 2]
 2012-08-27 05:02:55 Debug: Notice (8): Undefined variable: productos in [D:\xampp\htdocs\provider\app\views\elements\listado-productos.ctp, line 2]
+2012-08-27 07:21:51 Debug: Notice (8): Undefined index: subcategoria in [D:\xampp\htdocs\provider\app\controllers\lineas_controller.php, line 29]
+2012-08-27 07:22:35 Debug: Notice (8): Undefined index: subcategoria in [D:\xampp\htdocs\provider\app\controllers\lineas_controller.php, line 29]

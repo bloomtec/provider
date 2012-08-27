@@ -39,18 +39,18 @@ class Categoria extends AppModel {
 			'counterQuery' => ''
 		),
 		'Producto' => array(
-      'className' => 'Producto',
-      'foreignKey' => 'categoria_id',
-      'dependent' => false,
-      'conditions' => '',
-      'fields' => '',
-      'order' => '',
-      'limit' => '',
-      'offset' => '',
-      'exclusive' => '',
-      'finderQuery' => '',
-      'counterQuery' => ''
-    )
+	      'className' => 'Producto',
+	      'foreignKey' => 'categoria_id',
+	      'dependent' => false,
+	      'conditions' => '',
+	      'fields' => '',
+	      'order' => '',
+	      'limit' => '',
+	      'offset' => '',
+	      'exclusive' => '',
+	      'finderQuery' => '',
+	      'counterQuery' => ''
+	    )
 	);
 	function afterSave($created){
 		if($created){
