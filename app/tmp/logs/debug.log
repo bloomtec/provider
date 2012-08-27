@@ -196,3 +196,6 @@
 2012-08-26 21:23:28 Debug: Notice (8): Undefined variable: error in [D:\xampp\htdocs\provider\app\views\pages\contact.ctp, line 148]
 2012-08-26 23:55:04 Debug: Notice (8): Uninitialized string offset: 0 in [D:\xampp\htdocs\provider\cake\libs\view\helpers\html.php, line 608]
 2012-08-27 00:51:20 Debug: Notice (8): Undefined index: Categora in [D:\xampp\htdocs\provider\app\views\subcategorias\cms_edit.ctp, line 8]
+2012-08-27 05:00:58 Debug: Notice (8): Undefined variable: productos in [D:\xampp\htdocs\provider\app\views\elements\listado-productos.ctp, line 2]
+2012-08-27 05:02:18 Debug: Notice (8): Undefined variable: productos in [D:\xampp\htdocs\provider\app\views\elements\listado-productos.ctp, line 2]
+2012-08-27 05:02:55 Debug: Notice (8): Undefined variable: productos in [D:\xampp\htdocs\provider\app\views\elements\listado-productos.ctp, line 2]

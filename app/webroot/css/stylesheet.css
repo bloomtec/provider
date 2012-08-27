@@ -18,7 +18,7 @@ fieldset{
 #conteiner {
 	width: 940px;
 	height: 1052px;
-	background-image: url(recursos/background.jpg);
+	background-image: url(/recursos/background.jpg);
 	margin: 0 auto;
 }
 #content {
@@ -99,7 +99,7 @@ fieldset{
 	width: 850px;
 	height: 378px;
 	float: left;
-	/*background-image:url(recursos/banner_test.jpg);*/
+	/*background-image:url(/recursos/banner_test.jpg);*/
 	position:relative;
 	top: -1px;	
 }
@@ -107,7 +107,7 @@ fieldset{
 	width: 850px;
 	height: 7px;
 	float: left;
-	background-image:url(recursos/banner_underline.jpg);
+	background-image:url(/recursos/banner_underline.jpg);
 }
 #sub_banner{
 	width: 850px;
@@ -126,9 +126,9 @@ fieldset{
 }
 #contenido{
 	width: 850px;
-	height: 373px;
+	min-height: 373px;
 	float: left;
-	background-image:url(recursos/fondo_contenido.JPG);
+	background-image:url(/recursos/fondo_contenido.JPG);
 	color:#333;
 	font-size:12px;
 	text-align:justify;
@@ -190,7 +190,7 @@ fieldset{
 	width:200px;
 	height:45px;
 	float:left;
-	background-image:url(recursos/block_titles_1.JPG);
+	background-image:url(/recursos/block_titles_1.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
@@ -201,7 +201,7 @@ fieldset{
 	width:200px;
 	height:45px;
 	float:left;
-	background-image:url(recursos/block_titles_2.JPG);
+	background-image:url(/recursos/block_titles_2.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
@@ -212,7 +212,7 @@ fieldset{
 	width:200px;
 	height:45px;
 	float:left;
-	background-image:url(recursos/block_titles_3.JPG);
+	background-image:url(/recursos/block_titles_3.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
@@ -356,7 +356,7 @@ way to fit your requirements.
 	text-decoration: none;
 	font-size: 15px;
 	text-align:center;
-	background: url(recursos/inicio.jpg);
+	background: url(/recursos/inicio.jpg);
 }
 #nav li a.nuestra {
 	display: block;
@@ -369,7 +369,7 @@ way to fit your requirements.
 	text-decoration: none;
 	font-size: 13px;
 	text-align:center;
-	background: url(recursos/nuestra.JPG);
+	background: url(/recursos/nuestra.JPG);
 }
 #nav li a.clientes {
 	display: block;
@@ -382,7 +382,7 @@ way to fit your requirements.
 	text-decoration: none;
 	font-size: 13px;
 	text-align:center;
-	background: url(recursos/clientes.jpg);
+	background: url(/recursos/clientes.jpg);
 }
 #nav li a.productos {
 	display: block;
@@ -395,7 +395,7 @@ way to fit your requirements.
 	text-decoration: none;
 	font-size: 13px;
 	text-align:center;
-	background: url(recursos/productos.jpg);
+	background: url(/recursos/productos.jpg);
 }
 #nav li a.contacto {
 	display: block;
@@ -408,51 +408,51 @@ way to fit your requirements.
 	font-size: 13px;
 	text-decoration: none;
 	text-align:center;
-	background: url(recursos/contacto.jpg);
+	background: url(/recursos/contacto.jpg);
 }
 
 /*Para cambiar el boton cuando se pasa el puntero hover*/
 #nav li a.inicio:hover {
 	color: #fff;
-	background: url(recursos/inicio_2.jpg) no-repeat;
+	background: url(/recursos/inicio_2.jpg) no-repeat;
 }
 #nav li a.nuestra:hover {
 	color: #fff;
-	background: url(recursos/nuestra_2.JPG) no-repeat;
+	background: url(/recursos/nuestra_2.JPG) no-repeat;
 }
 #nav li a.clientes:hover {
 	color: #fff;
-	background: url(recursos/clientes_2.jpg) no-repeat;
+	background: url(/recursos/clientes_2.jpg) no-repeat;
 }
 #nav li a.productos:hover {
 	color: #fff;
-	background: url(recursos/productos_2.jpg) no-repeat;
+	background: url(/recursos/productos_2.jpg) no-repeat;
 }
 #nav li a.contacto:hover {
 	color: #fff;
-	background: url(recursos/contacto_2.jpg) no-repeat;
+	background: url(/recursos/contacto_2.jpg) no-repeat;
 }
 
 #nav li a.producto:hover span {
-	background: url(recursos/blank_over.gif) no-repeat right top;
+	background: url(/recursos/blank_over.gif) no-repeat right top;
 }
 
 #nav li a.producto:hover span.down {
-	background: url(recursos/productos_2.jpg) no-repeat right top;
+	background: url(/recursos/productos_2.jpg) no-repeat right top;
 }
 
 /*Para mantener el color y fondo del boton cuando se desplega el menu*/
 #nav li:hover > a.productos {
 	color:#FFF;
-	background: url(recursos/productos_2.jpg) no-repeat;
+	background: url(/recursos/productos_2.jpg) no-repeat;
 }
 #nav li:hover > a.productos span {
 	color:#FFF;
-	background: url(recursos/productos_2.jpg) no-repeat right top;
+	background: url(/recursos/productos_2.jpg) no-repeat right top;
 }
 #nav li:hover > a.productos span.down {
 	color:#FFF;
-	background: url(recursos/productos_2.jpg) no-repeat right top;
+	background: url(/recursos/productos_2.jpg) no-repeat right top;
 }
 
 
@@ -543,4 +543,29 @@ way to fit your requirements.
 .campos {
 	font-size: 9px;
 	color: #999;
+}
+ul.productos{
+	margin:0 auto;
+	text-align: center;
+	width: 805px;
+}
+li.producto{
+	
+	list-style: none;
+	width: 180px;
+	float:left;
+	margin:5px 10px;
+	text-align: center;
+}
+li.producto img{
+	width:170px;
+	-webkit-box-shadow: 5px 5px 10px #888;
+	-moz-box-shadow: 5px 5px 10px #888;
+	box-shadow: 5px 5px 10px #888;
+	max-height: 95px;
+}
+li.producto span{
+	margin-top: 1em;
+	display: block;
+	height: 2.5em;
 }
