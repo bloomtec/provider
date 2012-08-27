@@ -30,13 +30,13 @@ class Linea extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'Imagen' => array(
-			'className' => 'Imagen',
+		'Imagene' => array(
+			'className' => 'Imagene',
 			'foreignKey' => 'foreign_key',
 			'dependent' => true,
 			'conditions' => array('model_class' => 'Linea'),
 			'fields' => '',
-			'order' => '',
+			'order' => array('posicion' => 'ASC'),
 			'limit' => '',
 			'offset' => '',
 			'exclusive' => '',
