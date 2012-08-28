@@ -40,7 +40,11 @@
 
 				<?php
 					if(isset($this -> params['named']) && !empty($this -> params['named'])) {
-						echo $this -> element('banner', array('controller' => 'lineas', key($this -> params['named']) => $this -> params['named'][key($this -> params['named'])]));
+						if(key_exists('subcategoria', $this -> params['named'])) {
+							echo $this -> element('banner', array('controller' => 'lineas', 'subcategoria' => $this -> params['named']['subcategoria']));
+						} elseif(key_exists('categoria', $this -> params['named'])) {
+							echo $this -> element('banner', array('controller' => 'lineas', 'categoria' => $this -> params['named']['categoria']));
+						}
 					} else {
 						echo $this -> element('banner', array('controller' => 'lineas'));
 					}

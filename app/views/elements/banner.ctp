@@ -1,10 +1,14 @@
 <?php
 
 	$fotos = array();
-	if(isset($controller) && !empty($controller) && !isset($categoria)) {
+	if(isset($controller) && !empty($controller) && !(isset($categoria) || isset($subcategoria))) {
 		$fotos = $this -> requestAction('/' . $controller . '/getBannerImages/' . $this -> params['pass'][0]);
-	} elseif(isset($controller) && !empty($controller) && isset($categoria) && !empty($categoria)) {
-		$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria);
+	} elseif(isset($categoria) || isset($subcategoria)) {
+		if(isset($subcategoria) && !empty($subcategoria)) {
+			$fotos = $this -> requestAction('/subcategorias/getBannerImages/' . $subcategoria);
+		} elseif(isset($categoria) && !empty($categoria)) {
+			$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria);
+		}		
 	} elseif(isset($page) && !empty($page)) {
 		$fotos = $this -> requestAction('/banners/get/' . $page);
 	}

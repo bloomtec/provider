@@ -39,6 +39,19 @@ class Subcategoria extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Imagene' => array(
+			'className' => 'Imagene',
+			'foreignKey' => 'foreign_key',
+			'dependent' => true,
+			'conditions' => array('model_class' => 'Subcategoria'),
+			'fields' => '',
+			'order' => array('posicion' => 'ASC'),
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
 

@@ -42,5 +42,6 @@ class Producto extends AppModel {
 			'order' => ''
 		)
 	);
+	
 }
 ?>

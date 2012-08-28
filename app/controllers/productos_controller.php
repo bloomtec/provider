@@ -7,16 +7,6 @@ class ProductosController extends AppController {
 		parent::beforeFilter();
 		$this -> Auth -> allow("info");
 	}
-	
-	function getBannerImages($id = null) {
-		if ($id) {
-			$galeria = $this -> Producto -> findById($id);
-			//return $galeria['Imagene'];
-			debug($galeria);
-		} else {
-			return false;
-		}
-	}
 
 	function view($id = null) {
 		$this -> layout = "front";

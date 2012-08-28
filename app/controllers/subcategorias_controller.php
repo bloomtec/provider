@@ -7,7 +7,17 @@ class SubcategoriasController extends AppController {
 		parent::beforeFilter();
 		$this->Auth->allow("info","obtenerProductos");
 	}
-
+	
+	function getBannerImages($id = null) {
+		$this -> Subcategoria -> recursive = 1;
+		if ($id) {
+			$galeria = $this -> Subcategoria -> findById($id);
+			return $galeria['Imagene'];
+		} else {
+			return false;
+		}
+	}
+	
 	function cms_index() {
 		$this->Subcategoria->recursive = 0;
 		$this->set('subcategorias', $this->paginate(array("Subcategoria.nombre <>"=>"ninguna")));
@@ -98,6 +108,7 @@ class SubcategoriasController extends AppController {
 		}
 		$lineas = $this -> Subcategoria -> Categoria -> Linea -> find('list');
 		$this->set(compact("opcionesFotos",'lineas'));
+		$this -> set('controller', 'subcategorias');
 
 			/*$categorias = $this->Subcategoria->Categoria->find('list');
 		$this->set(compact('categorias'));*/
