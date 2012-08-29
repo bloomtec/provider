@@ -53,7 +53,7 @@ Buscar...
       <?php endforeach; ?>        
       </ul>
     </li>
- 	  <li class="top"><a href="contact" id="contacto" class="contacto"><span>Contáctenos</span></a></li>
+ 	  <li class="top"><a href="/contact" id="contacto" class="contacto"><span>Contáctenos</span></a></li>
 
 </ul>
 	
