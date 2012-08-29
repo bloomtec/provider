@@ -2,6 +2,8 @@
 	<h3><?php __('Acciones'); ?></h3>
 	<ul>
 		<!--<li><?php echo $this->Html->link(__('Cambiar Contraseña', true), array('controller'=>'usuarios','action' => 'edit','plugin'=>'autenticacion_simple','admin'=>true)); ?></li>-->
+		<li><?php echo $this->Html->link(__('Ver Lineas', true), array('controller' => 'lineas', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Crear Linea', true), array('controller' => 'lineas', 'action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Ver Productos', true), array('controller' => 'productos', 'action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('Crear Producto', true), array('controller' => 'productos', 'action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Ver Categorías', true), array('controller' => 'categorias', 'action' => 'index')); ?> </li>
