@@ -8,5 +8,6 @@
 		<li><?php echo $this->Html->link(__('Crear Categoría', true), array('controller' => 'categorias', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Ver Subcategorías', true), array('controller' => 'subcategorias', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Crear Subcategoría', true), array('controller' => 'subcategorias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Ver Banners', true), array('controller' => 'banners	', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

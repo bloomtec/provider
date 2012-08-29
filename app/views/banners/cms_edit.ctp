@@ -59,14 +59,13 @@
 			</script>
 		</div>
 		<?php endif; ?>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Banner', $this -> data['Banner']['id'])); ?> </li>
+			</ul>
+		</div>
 		</fieldset>
 	<?php //echo $this -> Form -> end(__('Modificar', true)); ?>
 	</form>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this -> Html -> link(__('Agregar Imagen', true), array('controller' => 'imagenes', 'action' => 'add', 'Banner', $this -> data['Banner']['id'])); ?> </li>
-		<li><?php echo $this -> Html -> link(__('Volver', true), array('action' => 'index')); ?></li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>
