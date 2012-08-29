@@ -57,10 +57,4 @@
 	});
 	</script>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Nuevo Producto', true), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Ver Categorias', true), array('controller' => 'categorias', 'action' => 'index')); ?> </li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>

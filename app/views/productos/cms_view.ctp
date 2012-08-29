@@ -39,14 +39,4 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Modificar Producto', true), array('action' => 'edit', $producto['Producto']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver Productos', true), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Producto', true), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver Subcategorias', true), array('controller' => 'subcategorias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Borrar Producto', true), array('action' => 'delete', $producto['Producto']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $producto['Producto']['id'])); ?> </li>
-		
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>

@@ -12,11 +12,11 @@
 		<input type="hidden" name="data[Imagene][path]" id="single-field">
 	</fieldset>
 	<div class="submit"><input type="submit" value="Enviar"></div>
-</form>
-</div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
+	<div class="actions">
 	<ul>
 		<li><?php echo $this->Html->link(__('Volver', true), array('controller' => $controller, 'action' => 'edit', $this -> params['pass'][1]));?></li>
 	</ul>
 </div>
+</form>
+</div>
+<?php echo $this -> element('cms-actions'); ?>

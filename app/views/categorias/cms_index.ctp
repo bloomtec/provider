@@ -42,14 +42,7 @@
 		<?php echo $this->Paginator->next(__('siguiente', true) . ' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
 </div>
-<div class="actions">
-	<h3><?php __('Opciones'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Crear Categoria', true), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Ver Subcategorias', true), array('controller' => 'subcategorias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Subcategoria', true), array('controller' => 'subcategorias', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>
 
 	<script>
 	var sendData=function(order){
