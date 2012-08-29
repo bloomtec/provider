@@ -7,6 +7,6 @@
 		echo $this->Form->input('posicion');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
 <?php echo $this -> element('cms-actions'); ?>

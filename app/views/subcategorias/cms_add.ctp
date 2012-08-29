@@ -13,6 +13,6 @@
 		echo '<div style="clear:none"> </div>';
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Guardar', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
 <?php echo $this -> element('cms-actions'); ?>

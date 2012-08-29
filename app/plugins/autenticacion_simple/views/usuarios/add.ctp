@@ -9,7 +9,7 @@
 		echo $this->Form->input('publico');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
