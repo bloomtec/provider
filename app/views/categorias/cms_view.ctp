@@ -20,17 +20,7 @@
 	-->
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php __('Opciones'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Modificar Categoría', true), array('action' => 'edit', $categoria['Categoria']['id'])); ?> </li>
-		
-		<li><?php echo $this->Html->link(__('Ver Categorías', true), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Categoría', true), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver Subcategorías', true), array('controller' => 'subcategorias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Subcategoía', true), array('controller' => 'subcategorias', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>
 <div class="related">
 	<h3><?php __('Subcategorías Relacionadas');?></h3>
 	<?php if (!empty($categoria['Subcategoria'])):?>

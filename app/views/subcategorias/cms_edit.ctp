@@ -67,15 +67,12 @@
 			</script>
 		</div>
 		<?php endif; ?>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Subcategoria', $this -> data['Subcategoria']['id'])); ?></li>
+			</ul>
+		</div>
 	</fieldset>
-<?php echo $this -> Form -> end(__('Guardar', true)); ?>
+<?php echo $this -> Form -> end(__('Enviar', true)); ?>
 </div>
-<div class="actions">
-	<h3><?php __('Opciones'); ?></h3>
-	<ul>
-		<li><?php echo $this -> Html -> link(__('Borrar', true), array('action' => 'delete', $this -> Form -> value('Subcategoria.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $this -> Form -> value('Subcategoria.id'))); ?></li>
-		<li><?php echo $this -> Html -> link(__('Ver Subcategorías', true), array('action' => 'index')); ?></li>
-		<li><?php echo $this -> Html -> link(__('Ver Categorías', true), array('controller' => 'categorias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this -> Html -> link(__('Agregar Imagen', true), array('controller' => 'imagenes', 'action' => 'add', 'Subcategoria', $this -> data['Subcategoria']['id'])); ?> </li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>

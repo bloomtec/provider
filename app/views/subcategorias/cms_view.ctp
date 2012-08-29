@@ -18,19 +18,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php __('Opciones'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Modificar Subcategoría', true), array('action' => 'edit', $subcategoria['Subcategoria']['id'])); ?> </li>
-		
-		<li><?php echo $this->Html->link(__('Ver Subcategorías', true), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Subcategoría', true), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver Categorías', true), array('controller' => 'categorias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Categoría', true), array('controller' => 'categorias', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver Productos', true), array('controller' => 'productos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Crear Producto', true), array('controller' => 'productos', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>
 <div class="related">
 	<h3><?php __('Productos Relacionados');?></h3>
 	<?php if (!empty($subcategoria['Producto'])):?>

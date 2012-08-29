@@ -37,11 +37,4 @@
 		<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<!--<li><?php echo $this -> Html -> link(__('New Banner', true), array('action' => 'add')); ?></li>
-		<li><?php echo $this -> Html -> link(__('List Imagenes', true), array('controller' => 'imagenes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this -> Html -> link(__('New Imagen', true), array('controller' => 'imagenes', 'action' => 'add')); ?> </li>-->
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>

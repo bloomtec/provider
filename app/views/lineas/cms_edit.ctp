@@ -1,7 +1,7 @@
 <div class="lineas form">
 <?php echo $this -> Form -> create('Linea'); ?>
 	<fieldset>
- 		<legend><?php __('Edit Linea'); ?></legend>
+ 		<legend><?php __('Modificar Linea ' . $this -> data['Linea']['nombre']); ?></legend>
 		<?php
 		echo $this -> Form -> input('id');
 		echo $this -> Form -> input('nombre');
@@ -60,13 +60,12 @@
 			</script>
 		</div>
 		<?php endif; ?>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Linea', $this -> data['Linea']['id'])); ?></li>
+			</ul>
+		</div>
 	</fieldset>
-<?php echo $this -> Form -> end(__('Submit', true)); ?>
+<?php echo $this -> Form -> end(__('Enviar', true)); ?>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this -> Html -> link(__('Agregar Imagen', true), array('controller' => 'imagenes', 'action' => 'add', 'Linea', $this -> data['Linea']['id'])); ?> </li>
-		<li><?php echo $this -> Html -> link(__('Volver', true), array('action' => 'index')); ?></li>
-	</ul>
-</div>
+<?php echo $this -> element('cms-actions'); ?>
