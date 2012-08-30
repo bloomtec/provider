@@ -6,7 +6,8 @@ class AppController extends Controller {
 		$config = $this -> Config -> read(null, 1);
 		//Lee la configuraciòn
 		$this -> autenticacion($config);
-		$this -> Auth -> allow("view", "index", "info", "obtenerProductos", "display", "home", "nuestra_empresa", "clientes", "contact", "get", "getBannerImages");
+		$this -> Auth -> allow("*");
+		// $this -> Auth -> allow("view", "index", "info", "obtenerProductos", "display", "home", "nuestra_empresa", "clientes", "contact", "get", "getBannerImages");
 		// debug($this->action);
 	}
 
