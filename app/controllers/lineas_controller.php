@@ -2,6 +2,7 @@
 class LineasController extends AppController {
 
 	var $name = 'Lineas';
+	
 	var $paginate = array('limit' => 10, 'order' => array('Linea.posicion' => 'asc'));
 
 	function get() {
@@ -40,7 +41,7 @@ class LineasController extends AppController {
 		}
 
 		$this -> loadModel('Producto');
-		$this -> paginate = array('Producto' => array('limit' => 12, 'conditions' => $conditions));
+		$this -> paginate = array('Producto' => array('limit' => 2000, 'conditions' => $conditions));
 		$this -> set('productos', $this -> paginate('Producto'));
 	}
 

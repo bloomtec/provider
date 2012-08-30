@@ -3,11 +3,6 @@ class ProductosController extends AppController {
 
 	var $name = 'Productos';
 
-	function beforeFilter() {
-		parent::beforeFilter();
-		$this -> Auth -> allow("info");
-	}
-
 	function view($id = null) {
 		$this -> layout = "front";
 		if (!$id) {
@@ -28,7 +23,7 @@ class ProductosController extends AppController {
 		$conditions['Producto.categoria_id'] = $categoria['Categoria']['id'];
 
 		$this -> loadModel('Producto');
-		$this -> paginate = array('Producto' => array('limit' => 12, 'conditions' => $conditions));
+		$this -> paginate = array('Producto' => array('limit' => 2000, 'conditions' => $conditions));
 		$this -> set('productos', $this -> paginate('Producto'));
 	}
 

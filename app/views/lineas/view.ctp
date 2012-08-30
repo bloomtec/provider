@@ -86,7 +86,7 @@
 					<div id="subcategorias"></div>
 
 					<?php echo $this -> element('listado-productos'); ?>
-					<div style='margin-top:1.5em;'>
+					<!--<div style='margin-top:1.5em;'>
 						<p class='paginator'>
 							<?php
 							echo $this -> Paginator -> counter(array('format' => __('Página %page% de %pages%,  %count% registros totales', true)));
@@ -100,7 +100,7 @@
 							<?php echo $this -> Paginator -> next(__('siguiente', true) . ' >>', array(), null, array('class' => 'disabled')); ?>
 						</div>
 						<div style='clear:both;'></div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 			<div style='clear:both;'></div>

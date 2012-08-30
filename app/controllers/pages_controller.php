@@ -103,7 +103,8 @@ class PagesController extends AppController {
 
 	function contact() {
 		
-		if($this -> data) {			
+		if(isset($this -> data['Email']) && !empty($this -> data['Email'])) {
+			debug($this -> data);
 			// multiple recipients
 			$to  = 'oficina_principal@provider.com.co'; //'oficina_principal@provider.com.co';
 			
@@ -183,7 +184,7 @@ class PagesController extends AppController {
 			// Mail it
 			mail($to, $subject, $message, $headers);
 			$this -> Session -> setFlash(__('Se ha enviado la información de contacto', true));
-			$this -> redirect('/contact');
+			//$this -> redirect('/contact');
 		}
 	}
 

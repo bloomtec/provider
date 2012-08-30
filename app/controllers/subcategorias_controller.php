@@ -2,11 +2,6 @@
 class SubcategoriasController extends AppController {
 
 	var $name = 'Subcategorias';
-
-	function beforeFilter(){
-		parent::beforeFilter();
-		$this->Auth->allow("info","obtenerProductos");
-	}
 	
 	function getBannerImages($id = null) {
 		$this -> Subcategoria -> recursive = 1;
