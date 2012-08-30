@@ -42,7 +42,7 @@ class Categoria extends AppModel {
 		'Subcategoria' => array(
 			'className' => 'Subcategoria',
 			'foreignKey' => 'categoria_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',

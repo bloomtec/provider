@@ -30,7 +30,7 @@ class Subcategoria extends AppModel {
 		'Producto' => array(
 			'className' => 'Producto',
 			'foreignKey' => 'subcategoria_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
