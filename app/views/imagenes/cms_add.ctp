@@ -14,7 +14,7 @@
 	<div class="submit"><input type="submit" value="Enviar"></div>
 	<div class="actions">
 	<ul>
-		<li><?php echo $this->Html->link(__('Volver', true), array('controller' => $controller, 'action' => 'edit', $this -> params['pass'][1]));?></li>
+		<li><?php echo $this->Html->link(__('Volver', true), array('controller' => $controller, 'action' => 'edit', $this -> params['pass'][1]), array('style' => '160px'));?></li>
 	</ul>
 </div>
 </form>

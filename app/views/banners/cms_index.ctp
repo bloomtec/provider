@@ -1,5 +1,6 @@
 <div class="banners index">
-	<h2><?php __('Banners'); ?></h2>
+	<h2><?php __('Banners Páginas Estaticas'); ?></h2>
+	<h4><?php __('Los banners correspondientes a Linea, Categoría y Subcategoría se ven desde el correspondiente modificar.'); ?></h4>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this -> Paginator -> sort('nombre'); ?></th>

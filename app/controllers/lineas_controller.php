@@ -5,7 +5,7 @@ class LineasController extends AppController {
 	var $paginate = array('limit' => 10, 'order' => array('Linea.posicion' => 'asc'));
 
 	function get() {
-		return $this -> Linea -> find('all');
+		return $this -> Linea -> find('all', array('order' => array('Linea.posicion' => 'ASC')));
 	}
 
 	function getBannerImages($id = null) {

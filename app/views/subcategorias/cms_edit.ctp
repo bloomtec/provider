@@ -69,7 +69,7 @@
 		<?php endif; ?>
 		<div class="actions">
 			<ul>
-				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Subcategoria', $this -> data['Subcategoria']['id'])); ?></li>
+				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Subcategoria', $this -> data['Subcategoria']['id']), array('style' => 'width:160px;')); ?></li>
 			</ul>
 		</div>
 	</fieldset>
