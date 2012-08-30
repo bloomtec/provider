@@ -9,7 +9,7 @@
 		<li><?php echo $this->Html->link(__('Crear Categoría', true), array('controller' => 'categorias', 'action' => 'add', 'plugin' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('Ver Subcategorías', true), array('controller' => 'subcategorias', 'action' => 'index', 'plugin' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('Crear Subcategoría', true), array('controller' => 'subcategorias', 'action' => 'add', 'plugin' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver Banners', true), array('controller' => 'banners	', 'action' => 'index', 'plugin' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('Ver Banners Páginas Estaticas', true), array('controller' => 'banners	', 'action' => 'index', 'plugin' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('Cambiar Contraseña', true), array('controller'=>'usuarios','action' => 'edit','plugin'=>'autenticacion_simple','cms'=>true)); ?></li>
 	</ul>
 </div>
