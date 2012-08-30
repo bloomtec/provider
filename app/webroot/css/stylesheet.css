@@ -161,7 +161,7 @@ fieldset{
 	background-color:#b00cbb;
 }
 #contenido_categoria{
-	width: 828px;
+	width: 700px;
 	height: 30px;
 	position: relative;
 	float: left;
@@ -169,8 +169,7 @@ fieldset{
 	color:#1e2326;
 	font-size:15px;
 	line-height: 2	;
-	padding-left:20px;
-	border:#666 1px solid;
+	
 }
 
 #block {
@@ -568,7 +567,7 @@ li.producto img{
 li.producto a.name{
 	margin-top: 1em;
 	display: block;
-	height: 2.5em;
+	height: 4.5em;
 }
 .paginator{
 	float:left;
@@ -649,4 +648,44 @@ div.subcategorias{
 }
 #producto .view-producto p{
 	color:#999;
+}
+.scrollable {
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 90%;
+	height:90px;
+}
+
+
+.scrollable .items {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+}
+
+
+.items li {
+	float:left;
+}
+.browse{
+	float:left;
+	display: block;
+	width:74px;
+	height: 28px;
+	cursor: pointer;
+}
+.next{
+	background: url(/img/vermas-next-.jpg);
+}
+.prev{
+	background: url(/img/vermas-prev-.jpg);
+
+}
+.next.disabled{
+	background: url(/img/vermas2-next-.jpg);
+}
+.prev.disabled{
+	background: url(/img/vermas2-prev-.jpg);
+
 }

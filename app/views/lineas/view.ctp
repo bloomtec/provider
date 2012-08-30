@@ -32,6 +32,14 @@
 		</style>
 		<script src="/js/stuHover.js" type="text/javascript"></script>
 		<script src="/js/jquery.min.js" type="text/javascript"></script>
+		<script src="/js/jquery.tools.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+			  // initialize scrollable
+			  $(".scrollable").scrollable();
+			});
+		</script>
 	</head>
 	<body id="linea">
 		<div id="conteiner" style="height:894px">
@@ -64,25 +72,31 @@
 					</div>
 
 					<div id="contenido_sublinea"></div>
+					<div class="contenedor-categorias" style="border: #666 1px solid;">
+						<a  class="prev browse left" alt="anterior"></a>
+						<div  id="contenido_categoria" class="scrollable">
+						<ul  class="items" >						
+							<?php foreach($linea['Categoria'] as $cate):?>
+							<li class='categoria' rel="<?php echo $cate['id']?>">
+								<a  href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $cate['id']?>"> ● <?php echo $cate['nombre']?> </a>
+								<div class="subcategorias" rel='<?php echo  $cate['id'] ?>'>
+									<?php foreach($cate['Subcategoria'] as $subcate):
+									?>
+									<?php if($subcate['nombre'] != 'ninguna'):
+									?>
+									<a rel='<?php echo  $subcate['id'] ?>' href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $cate['id']?>/subcategoria:<?php echo $subcate['id']?>">	●<?php echo $subcate['nombre']?>
+									</a>
+									<?php endif; ?>
+									<?php endforeach; ?>
+								</div>
+							</li>
+							<?php endforeach; ?>
 
-					<ul id="contenido_categoria">
-						<?php foreach($linea['Categoria'] as $cate):?>
-						<li class='categoria' rel="<?php echo $cate['id']?>">
-							<a  href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $cate['id']?>"> ● <?php echo $cate['nombre']?> </a>
-							<div class="subcategorias" rel='<?php echo  $cate['id'] ?>'>
-								<?php foreach($cate['Subcategoria'] as $subcate):
-								?>
-								<?php if($subcate['nombre'] != 'ninguna'):
-								?>
-								<a rel='<?php echo  $subcate['id'] ?>' href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $cate['id']?>/subcategoria:<?php echo $subcate['id']?>">	●<?php echo $subcate['nombre']?>
-								</a>
-								<?php endif; ?>
-								<?php endforeach; ?>
-							</div>
-						</li>
-						<?php endforeach; ?>
-
-					</ul>
+						</ul>
+						</div>
+						<a  class="next browse right" alt="siguiente"></a>
+						<div style="clear:both;"></div>
+					</div>
 					<div id="subcategorias"></div>
 
 					<?php echo $this -> element('listado-productos'); ?>
