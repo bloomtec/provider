@@ -5,7 +5,7 @@
 		<?php
 		echo $this -> Form -> input('id');
 		echo $this -> Form -> input('nombre');
-		//echo $this->Form->input('posicion');
+		echo $this->Form->input('color');
 		?>
 		<?php if(empty($this -> data['Imagene'])) : ?>
 		<h3>Actualmente no hay imagenes para este banner.</h3>

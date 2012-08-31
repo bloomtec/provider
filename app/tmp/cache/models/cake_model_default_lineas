@@ -1,11 +1,2 @@
-<<<<<<< HEAD
-1346451001
-=======
-<<<<<<< HEAD
-1346450594
-a:3:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:6:"nombre";a:4:{s:4:"type";s:6:"string";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:45;}s:8:"posicion";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:11;}}
-=======
-1346450050
->>>>>>> afc9f643b9dcea87d6a8fd024f7aace05968da20
+1346451315
 a:4:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:6:"nombre";a:4:{s:4:"type";s:6:"string";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:100;}s:5:"color";a:4:{s:4:"type";s:6:"string";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:20;}s:8:"posicion";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:11;}}
->>>>>>> d1aa24468b1471fcd80d2da530a53a4c79f984d0
