@@ -325,7 +325,7 @@
 					</p>
 
 				</div>
-
+				<div style="clear:both;"></div>
 			</div>
 
 			<?php echo $this -> element("footer"); ?>

@@ -126,7 +126,6 @@ fieldset{
 }
 #contenido{
 	width: 850px;
-	min-height: 373px;
 	float: left;
 	background-image:url(/recursos/fondo_contenido.JPG);
 	color:#333;
@@ -173,13 +172,14 @@ fieldset{
 }
 
 #block {
-	width:200px;
-	height:350px;
+	width:261px;
+	height:300px;
 	float:left;
 	background-color:#FFF;
 	border: 1px solid #999;
 	box-shadow: 5px 5px 10px #888888;
-	margin-right:14px;
+	margin-right:10px;
+	margin-left:10px;
 	font-size:11px;
 	color: #666;
 	text-align:center;
@@ -187,10 +187,10 @@ fieldset{
 	-webkit-border-radius:0px 0px 10px 10px	; /* Safari */
 }
 #block_title_1 {
-	width:200px;
+	width:261px;
 	height:45px;
 	float:left;
-	background-image:url(/recursos/block_titles_1.JPG);
+	background-image:url(recursos/block_titles_1.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
@@ -198,27 +198,26 @@ fieldset{
 	line-height: 3;
 }
 #block_title_2 {
-	width:200px;
+	width:261px;
 	height:45px;
 	float:left;
-	background-image:url(/recursos/block_titles_2.JPG);
+	background-image:url(recursos/block_titles_2.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
 	color:#CCC;
-	line-height: 3;
+	line-height: 1,9;
 }
 #block_title_3 {
-	width:200px;
+	width:261px;
 	height:45px;
 	float:left;
-	background-image:url(/recursos/block_titles_3.JPG);
+	background-image:url(recursos/block_titles_3.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
 	color:#CCC;
 	line-height: 3;
-
 }
 #newsletter {
 	width: 200px;

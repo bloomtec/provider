@@ -52,12 +52,10 @@
 </table>
 <p style="text-align:center;"><img src="/recursos/nuestra_empresa.jpg" width="750" height="170" alt="nuestra_empresa" /></p>
 </div>
-
+<div style="clear:both;"></div>
 </div>
 
 <?php echo  $this -> element("footer"); ?>
-
-
 </div>
 
 
