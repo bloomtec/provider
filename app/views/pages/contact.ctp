@@ -28,7 +28,7 @@
 <div id="content">
 <?php echo $this -> element("header"); ?>
 
-<?php echo $this -> element('banner', array('page' => 'contacto')); ?>
+<?php echo $this -> element('banner', array('page_banner' => 'contacto')); ?>
 
 <div id="banner_underline"> </div>
 
