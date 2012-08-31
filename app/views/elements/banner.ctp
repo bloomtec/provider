@@ -1,16 +1,15 @@
 <?php
-
 	$fotos = array();
-	if(isset($controller) && !empty($controller) && !(isset($categoria) || isset($subcategoria))) {
-		$fotos = $this -> requestAction('/' . $controller . '/getBannerImages/' . $this -> params['pass'][0]);
-	} elseif(isset($categoria) || isset($subcategoria)) {
-		if(isset($subcategoria) && !empty($subcategoria)) {
-			$fotos = $this -> requestAction('/subcategorias/getBannerImages/' . $subcategoria);
+	if(isset($controller_banner) && !empty($controller_banner) && !(isset($categoria_banner) || isset($subcategoria_banner))) {
+		$fotos = $this -> requestAction('/' . $controller_banner . '/getBannerImages/' . $this -> params['pass'][0]);
+	} elseif(isset($categoria_banner) || isset($subcategoria_banner)) {
+		if(isset($subcategoria_banner) && !empty($subcategoria_banner)) {
+			$fotos = $this -> requestAction('/subcategorias/getBannerImages/' . $subcategoria_banner);
 		} elseif(isset($categoria) && !empty($categoria)) {
-			$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria);
+			$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria_banner);
 		}		
-	} elseif(isset($page) && !empty($page)) {
-		$fotos = $this -> requestAction('/banners/get/' . $page);
+	} elseif(isset($page_banner) && !empty($page_banner)) {
+		$fotos = $this -> requestAction('/banners/get/' . $page_banner);
 	}
 ?>
 <?php if(!empty($fotos)) : ?>
@@ -39,5 +38,3 @@
 	</div>
 </div>
 <?php endif; ?>
-<?php //debug($controller); ?>
-<?php //debug($fotos); ?>

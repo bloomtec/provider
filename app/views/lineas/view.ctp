@@ -44,17 +44,17 @@
 	<body id="linea">
 		<div id="conteiner" style="height:894px">
 			<div id="content">
-				<?php echo $this -> element("header"); //debug($this -> params); ?>
+				<?php echo $this -> element("header"); ?>
 
 				<?php
 					if(isset($this -> params['named']) && !empty($this -> params['named'])) {
 						if(key_exists('subcategoria', $this -> params['named'])) {
-							echo $this -> element('banner', array('controller' => 'lineas', 'subcategoria' => $this -> params['named']['subcategoria']));
+							echo $this -> element('banner', array('controller_banner' => 'lineas', 'subcategoria_banner' => $this -> params['named']['subcategoria']));
 						} elseif(key_exists('categoria', $this -> params['named'])) {
-							echo $this -> element('banner', array('controller' => 'lineas', 'categoria' => $this -> params['named']['categoria']));
+							echo $this -> element('banner', array('controller_banner' => 'lineas', 'categoria_banner' => $this -> params['named']['categoria']));
 						}
 					} else {
-						echo $this -> element('banner', array('controller' => 'lineas'));
+						echo $this -> element('banner', array('controller_banner' => 'lineas'));
 					}
 				?>
 

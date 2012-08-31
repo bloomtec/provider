@@ -2,6 +2,16 @@
 class ProductosController extends AppController {
 
 	var $name = 'Productos';
+	
+	function getBannerImages($id = null) {
+		$this -> Producto -> Categoria -> recursive = 1;
+		if ($id) {
+			$galeria = $this -> Producto -> Categoria -> findById($id);
+			return $galeria['Imagene'];
+		} else {
+			return false;
+		}
+	}
 
 	function view($id = null) {
 		$this -> layout = "front";

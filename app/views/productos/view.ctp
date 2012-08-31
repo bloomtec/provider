@@ -47,7 +47,7 @@ a:active {
 		<div id="content">
 			<?php echo $this -> element("header"); ?>
 
-			<?php echo $this -> element('banner', array('controller' => 'productos'));?>
+			<?php echo $this -> element('banner', array('controller_banner' => 'productos')); ?>
 
 			<div id="banner_underline"> </div>
 
