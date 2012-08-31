@@ -12,22 +12,7 @@
 <div id="header_up_center">
 </div>
 
-<div id="header_up_search">
 
-<div id="search_conteiner">
-
-<div id="search_box">
-Buscar...
-</div>
-
-<div style="float:right; position:relative; left:-10px; top:5px;"> <img src="/recursos/magnify.jpg" alt="search" width="30" height="30" usemap="#Map" border="0" />
-  <map name="Map" id="Map">
-    <area shape="rect" coords="-17,-24,37,37" href="#" />
-  </map>
-</div>
- </div>
-
-</div>
   
 </div>
 

@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<div id="conteiner">
+<div id="conteiner" style="height:1010px;">
 <div id="content">
 <?php echo $this ->element("header"); ?>
 
@@ -33,95 +33,57 @@
 
 <?php echo $this ->element("redes_sociales"); ?>
 
-<div id="contenido">
+<div id="contenido" style="height:331px;">
 
-<div id="contenido_content">
+<div id="contenido_content" style="height:331px;">
 
 <div id="block">
-<div id="block_title_1">
-TITULO 1
+<div id="block_title_1"> LÍNEA DE OFICINA
 </div>
-<p>&nbsp;</p>
-<p style="font-weight:bold; font-size:14px; color:#000;">TITULO</p>
-<p>&nbsp;</p>
-<table width="190" border="0" align="center">
+
+<img src="/recursos/block1.jpg" width="261" height="230" alt="Linea de oficina" />
+<table width="90%" border="0" align="center">
   <tr>
-    <td>texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto --  texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- </td>
-  </tr>
-  <tr>
-    <td align="right"><strong>Ver mas...</strong></td>
+    <td align="right"><strong><a href="http://provider.bloomweb.co/linea/1">Ver mas...</a></strong></td>
   </tr>
 </table>
-<p style="font-weight:bold; font-size:14px; color:#000;">&nbsp;</p>
+
 </div>
 
 
 <div id="block">
-<div id="block_title_2">
-TITULO 2
+<div id="block_title_2" style=""> LÍNEA DE AREAS COMUNES, AUDITORIOS Y ESCOLAR
 </div>
-<p>&nbsp;</p>
-<p style="font-weight:bold; font-size:14px; color:#000;">TITULO</p>
-<p>&nbsp;</p>
-<table width="190" border="0" align="center">
+<img src="/recursos/block2.jpg" width="261" height="230" alt="linea de areas comune, auditorios y escolar" />
+<table width="90%" border="0" align="center">
   <tr>
-    <td>texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto --  texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- </td>
-  </tr>
-  <tr>
-    <td align="right"><strong>Ver mas...</strong></td>
+    <td align="right"><strong><a href="http://provider.bloomweb.co/linea/2">Ver mas...</a></strong></td>
   </tr>
 </table>
-<p style="font-weight:bold; font-size:14px; color:#000;">&nbsp;</p>
+
 </div>
 
 
 <div id="block">
 <div id="block_title_3">
-TITULO 3
+CONTACTANOS
 </div>
-
-<p>&nbsp;</p>
-<p style="font-weight:bold; font-size:14px; color:#000;">TITULO</p>
-<p>&nbsp;</p>
-<table width="190" border="0" align="center">
+<img src="/recursos/block3.jpg" width="261" height="230" alt="contactanos" />
+<table width="90%" border="0" align="center">
   <tr>
-    <td>texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto --  texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- texto -- </td>
-  </tr>
-  <tr>
-    <td align="right"><strong>Ver mas...</strong></td>
+    <td align="right"><strong><a href="contact.php">Ver mas...</a></strong></td>
   </tr>
 </table>
 <p style="font-weight:bold; font-size:14px; color:#000;">&nbsp;</p>
 </div>
-
-<div id="newsletter">
-<div style="border-bottom:1px solid #999; height:45px;"> 
-NEWSLETTER
-</div>
-
-<div id="newsname">
-Nombre completo
-</div>
-
-<div id="newsmail">
-E-mail
-</div>
-
-<div id="newssend">
-SEND
 </div>
 
 </div>
-
+<div style="clear:both;"></div>
 </div>
-</div>
-
-</div>
-
 <?php echo  $this ->element("footer"); ?>
-
-
 </div>
+
 
 
 </body>
