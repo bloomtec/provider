@@ -5,7 +5,7 @@
 		<?php
 		echo $this -> Form -> input('id');
 		echo $this -> Form -> input('nombre');
-		//echo $this->Form->input('posicion');
+		echo $this->Form->input('color');
 		?>
 		<?php if(empty($this -> data['Imagene'])) : ?>
 		<h3>Actualmente no hay imagenes para este banner.</h3>
@@ -62,7 +62,7 @@
 		<?php endif; ?>
 		<div class="actions">
 			<ul>
-				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Linea', $this -> data['Linea']['id']), array('style' => 'width:160px;')); ?></li>
+				<li><?php echo $this -> Html -> link(__('Agregar Imagen Al Banner', true), array('controller' => 'imagenes', 'action' => 'add', 'Linea', $this -> data['Linea']['id']), array('style' => 'text-align:center; width: 200px;')); ?></li>
 			</ul>
 		</div>
 	</fieldset>
