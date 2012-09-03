@@ -125,9 +125,7 @@
 			$(function(){
 var categoria="<?php if(isset($categoria)) echo $categoria['Categoria']['id'] ?>
 	";
-	var subcategoria="
-<?php if(isset($subcategoria)) echo $subcategoria['Subcategoria']['id'] ?>
-	";
+	var subcategoria="<?php if(isset($subcategoria)) echo $subcategoria['Subcategoria']['id'];  else echo "";?>";
 	if(categoria){
 	$("#subcategorias").html($('div.subcategorias[rel="'+categoria+'"]').clone());
 	$('li.categoria[rel="'+categoria+'"] > a').addClass('current');

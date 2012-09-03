@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 1346451570
 =======
 1346514769
@@ -7,4 +8,7 @@
 =======
 1346693410
 >>>>>>> 5f4c768f6bcee8567ff54e29dcdc4dc01e1d4e45
+=======
+1346694879
+>>>>>>> 3123db50beb635e53290152d7d9ae7b8f2e5d26b
 a:2:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:16:"autenticacion_id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:5:"index";}}
