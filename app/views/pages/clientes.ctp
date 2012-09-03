@@ -14,7 +14,7 @@
 		<link href="/favicon.ico" type="image/x-icon" rel="icon" />
 
 		<link rel="stylesheet" href="/css/stylesheet.css" type="text/css"/>
-		v
+		<script src="/js/jquery.min.js" type="text/javascript"></script>
 		<script src="/js/stuHover.js" type="text/javascript"></script>
 
 	</head>

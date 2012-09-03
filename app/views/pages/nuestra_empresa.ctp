@@ -15,7 +15,7 @@
 
 
 <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"/>
-<script src="/js/jquery.tools.min.js" type="text/javascript"></script>
+<script src="/js/jquery.min.js" type="text/javascript"></script>
 <script src="/js/stuHover.js" type="text/javascript"></script>
 
 </head>
