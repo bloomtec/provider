@@ -190,7 +190,7 @@ fieldset{
 	width:261px;
 	height:45px;
 	float:left;
-	background-image:url(recursos/block_titles_1.JPG);
+	background-image:url(/recursos/block_titles_1.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
@@ -201,7 +201,7 @@ fieldset{
 	width:261px;
 	height:45px;
 	float:left;
-	background-image:url(recursos/block_titles_2.JPG);
+	background-image:url(/recursos/block_titles_2.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
@@ -212,7 +212,7 @@ fieldset{
 	width:261px;
 	height:45px;
 	float:left;
-	background-image:url(recursos/block_titles_3.JPG);
+	background-image:url(/recursos/block_titles_3.JPG);
 	background-repeat:repeat-x;
 	font-size:12px;
 	text-align:center;
