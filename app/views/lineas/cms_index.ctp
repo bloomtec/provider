@@ -4,7 +4,7 @@
 	<tr class='ui-state-disabled'>	
 			<th><?php echo $this->Paginator->sort('Posición', 'posicion');?></th>
 			<th><?php echo $this->Paginator->sort('nombre');?></th>
-			
+			<th><?php echo $this->Paginator->sort('color');?></th>
 			<th class="actions"><?php __('Acciones');?></th>
 	</tr>
 	<?php
@@ -17,7 +17,8 @@
 	?>
 	<tr<?php echo $class;?> id="<?php echo $linea['Linea']['id'];?>" >
 		<td><?php echo $linea['Linea']['posicion']; ?>&nbsp;</td>
-		<td><?php echo $linea['Linea']['nombre']; ?>&nbsp;</td>		
+		<td><?php echo $linea['Linea']['nombre']; ?>&nbsp;</td>	
+		<td><div style="width:25px; height:25px; background:<?php echo $linea['Linea']['color']; ?>"></div>&nbsp;</td>	
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver', true), array('action' => 'view', $linea['Linea']['id'])); ?>
 			<?php echo $this->Html->link(__('Modificar', true), array('action' => 'edit', $linea['Linea']['id'])); ?>

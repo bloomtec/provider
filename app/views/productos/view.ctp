@@ -62,7 +62,7 @@ a:active {
 				  <?php echo " -> ".$producto['Producto']['nombre']; ?>
 				</div>
 
-				<div id="contenido_sublinea"> </div>
+				<div id="contenido_sublinea" style="background:<?php echo $linea['Linea']['color']; ?>"></div>
 
 				<div class="contenedor-categorias" style="border: #666 1px solid;">
 						<a  class="prev browse left" alt="anterior"></a>
