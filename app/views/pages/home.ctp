@@ -71,7 +71,7 @@ CONTACTANOS
 <img src="/recursos/block3.jpg" width="261" height="230" alt="contactanos" />
 <table width="90%" border="0" align="center">
   <tr>
-    <td align="right"><strong><a href="contact.php">Ver mas...</a></strong></td>
+    <td align="right"><strong><a href="contact">Ver mas...</a></strong></td>
   </tr>
 </table>
 <p style="font-weight:bold; font-size:14px; color:#000;">&nbsp;</p>
