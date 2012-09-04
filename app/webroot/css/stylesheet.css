@@ -589,13 +589,12 @@ div.subcategorias{
 	display:block;
 }
 #subcategorias{
-	width: 828px;
+	width: 848px;
 	height: 30px;
 	background-color: white;
 	color: #1E2326;
 	font-size: 15px;
 	line-height: 2;
-	padding-left: 20px;
 	border: #666 1px solid;
 	float:left;
 }
@@ -648,7 +647,7 @@ div.subcategorias{
 #producto .view-producto p{
 	color:#999;
 }
-.scrollable {
+.scrollable, .scroll {
 	/* required settings */
 	position:relative;
 	overflow:hidden;
@@ -657,7 +656,7 @@ div.subcategorias{
 }
 
 
-.scrollable .items {
+.scrollable .items, .scroll .the-items {
 	/* this cannot be too large */
 	width:20000em;
 	position:absolute;
@@ -674,17 +673,21 @@ div.subcategorias{
 	height: 28px;
 	cursor: pointer;
 }
-.next{
+.next, .the-next{
 	background: url(/img/vermas-next-.jpg);
 }
-.prev{
+.prev, .the-prev{
 	background: url(/img/vermas-prev-.jpg);
 
 }
-.next.disabled{
+.next.disabled, .the-next.disabled{
 	background: url(/img/vermas2-next-.jpg);
 }
-.prev.disabled{
+.prev.disabled, .the-prev.disabled{
 	background: url(/img/vermas2-prev-.jpg);
 
+}
+#subcategorias .scroll{
+	width:700px;
+	float: left;
 }

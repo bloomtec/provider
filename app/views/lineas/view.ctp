@@ -67,32 +67,7 @@
 					</div>
 
 					<div id="contenido_sublinea" style="background:<?php echo $linea['Linea']['color']; ?>"></div>
-					<div class="contenedor-categorias" style="border: #666 1px solid;">
-						<a  class="prev browse left" alt="anterior"></a>
-						<div  id="contenido_categoria" class="scrollable">
-						<ul  class="items" >						
-							<?php foreach($linea['Categoria'] as $cate):?>
-							<li class='categoria' rel="<?php echo $cate['id']?>">
-								<a  href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $cate['id']?>"> ● <?php echo $cate['nombre']?> </a>
-								<div class="subcategorias" rel='<?php echo  $cate['id'] ?>'>
-									<?php foreach($cate['Subcategoria'] as $subcate):
-									?>
-									<?php if($subcate['nombre'] != 'ninguna'):
-									?>
-									<a rel='<?php echo  $subcate['id'] ?>' href="/linea/<?php echo $linea['Linea']['id'] ?>/categoria:<?php echo $cate['id']?>/subcategoria:<?php echo $subcate['id']?>">	●<?php echo $subcate['nombre']?>
-									</a>
-									<?php endif; ?>
-									<?php endforeach; ?>
-								</div>
-							</li>
-							<?php endforeach; ?>
-
-						</ul>
-						</div>
-						<a  class="next browse right" alt="siguiente"></a>
-						<div style="clear:both;"></div>
-					</div>
-					<div id="subcategorias"></div>
+			<?php echo $this -> element('scrolls');?>
 
 					<?php echo $this -> element('listado-productos'); ?>
 					<!--<div style='margin-top:1.5em;'>
@@ -116,32 +91,7 @@
 			<?php echo $this -> element("footer"); ?>
 
 		</div>
-		<script type='text/javascript'>
-			$(function(){
-				 $(".scrollable").scrollable();
-var categoria="<?php if(isset($categoria)) echo $categoria['Categoria']['id'] ?>
-	";
-	var subcategoria="<?php if(isset($subcategoria)) echo $subcategoria['Subcategoria']['id'];  else echo "";?>";
-	if(categoria){
-	$("#subcategorias").html($('div.subcategorias[rel="'+categoria+'"]').clone());
-	$('li.categoria[rel="'+categoria+'"] > a').addClass('current');
-	}
-	if(subcategoria){
-	$('div.subcategorias[rel="'+categoria+'"]  a[rel="'+subcategoria+'"]').addClass('current');
-	}
-	var lastSubcategorias=$("#subcategorias").html();
-	$('li.categoria').hover(
-	function(){
-	$('li.categoria a').removeClass('over');
-	$(this).find('a').addClass('over');
-	$("#subcategorias").html($(this).find('.subcategorias').clone());
-	},
-	function(){
-
-	});
-
-	});
-		</script>
+		
 
 	</body>
 </html>
