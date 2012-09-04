@@ -5,6 +5,9 @@
 	} elseif(isset($categoria_banner) || isset($subcategoria_banner)) {
 		if(isset($subcategoria_banner) && !empty($subcategoria_banner)) {
 			$fotos = $this -> requestAction('/subcategorias/getBannerImages/' . $subcategoria_banner);
+			if(empty($fotos)) {
+				$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria_banner);
+			}
 		} elseif(isset($categoria) && !empty($categoria)) {
 			$fotos = $this -> requestAction('/categorias/getBannerImages/' . $categoria_banner);
 		}		
