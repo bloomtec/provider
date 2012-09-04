@@ -33,7 +33,12 @@
 		<script src="/js/stuHover.js" type="text/javascript"></script>
 		<script src="/js/jquery.min.js" type="text/javascript"></script> 
 		<script src="/js/jquery.tools.min.js" type="text/javascript"></script>
-		
+		<script type="text/javascript">
+			$(function() {
+			  // initialize scrollable
+			  $(".scrollable").scrollable();
+			});
+		</script>
 		
 	</head>
 	<body id="linea">
