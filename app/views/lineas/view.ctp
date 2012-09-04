@@ -49,7 +49,7 @@
 				<?php
 					if(isset($this -> params['named']) && !empty($this -> params['named'])) {
 						if(key_exists('subcategoria', $this -> params['named'])) {
-							echo $this -> element('banner', array('controller_banner' => 'lineas', 'subcategoria_banner' => $this -> params['named']['subcategoria']));
+							echo $this -> element('banner', array('controller_banner' => 'lineas', 'categoria_banner' => $this -> params['named']['categoria'], 'subcategoria_banner' => $this -> params['named']['subcategoria']));
 						} elseif(key_exists('categoria', $this -> params['named'])) {
 							echo $this -> element('banner', array('controller_banner' => 'lineas', 'categoria_banner' => $this -> params['named']['categoria']));
 						}
