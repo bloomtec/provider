@@ -6,7 +6,8 @@ class ProductosController extends AppController {
 	function getBannerImages($id = null) {
 		$this -> Producto -> Categoria -> recursive = 1;
 		if ($id) {
-			$galeria = $this -> Producto -> Categoria -> findById($id);
+			$producto = $this -> Producto -> read(null, $id);
+			$galeria = $this -> Producto -> Categoria -> findById($producto['Categoria']['id']);
 			return $galeria['Imagene'];
 		} else {
 			return false;
