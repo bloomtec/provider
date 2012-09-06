@@ -34,7 +34,16 @@ class ProductosController extends AppController {
 		$conditions['Producto.categoria_id'] = $categoria['Categoria']['id'];
 
 		$this -> loadModel('Producto');
-		$this -> paginate = array('Producto' => array('limit' => 2000, 'conditions' => $conditions));
+		$this -> paginate = array(
+			'Producto' => array('
+				limit' => 2000, 
+				'conditions' => $conditions,
+				'order' => array(
+					'Producto.categoria_id'=>'ASC',
+					'Producto.orden_en_categoria' => 'ASC'
+					)
+				)
+			);
 		$this -> set('productos', $this -> paginate('Producto'));
 	}
 

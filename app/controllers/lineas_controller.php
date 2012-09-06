@@ -27,7 +27,7 @@ class LineasController extends AppController {
 		$this -> set('linea', $this -> Linea -> read(null, $id));
 		
 		$conditions = array();
-		$order = array('Producto.orden_en_categoria' => 'ASC');
+		$order = array('Producto.categoria_id'=>'ASC','Producto.orden_en_categoria' => 'ASC');
 		
 		if (!isset($this -> params['named']['categoria'])) {
 			$categorias = $this -> Linea -> Categoria -> find('list', array('conditions' => array('Categoria.linea_id' => $id), 'fields' => array('id', 'id')));
@@ -41,7 +41,7 @@ class LineasController extends AppController {
 			$conditions['Producto.subcategoria_id'] = $this -> params['named']['subcategoria'];
 			$this -> Linea -> Categoria -> Subcategoria -> recursive = -1;
 			$this -> set('subcategoria', $this -> Linea -> Categoria -> Subcategoria -> read(null, $this -> params['named']['subcategoria']));
-			$order = array('Producto.orden_en_subcategoria' => 'ASC');
+			//$order = array('Producto.orden_en_subcategoria' => 'ASC');
 		}
 
 		$this -> loadModel('Producto');
