@@ -160,22 +160,25 @@
       <p>&nbsp;</p></td>
   </tr>
   <tr>
-    <td height="98"><table width="80%" border="0" align="center">
+    <td height="98"><table width="90%" border="0" align="center">
       <tr>
         <td width="12%"><img src="recursos/telefono.JPG" width="18" height="18" alt="telefono de contacto" /></td>
-        <td width="88%">Tel: (57) (2) 8855766</td>
+        <td width="88%">PBX: (57) (2) 8855766</td>
       </tr>
+      <!--
       <tr>
         <td><img src="recursos/celular.JPG" width="18" height="18" alt="celular de contacto" /></td>
         <td>Cel: (57) (315) 555 5555</td>
       </tr>
+    -->
       <tr>
         <td><img src="recursos/correo.JPG" width="18" height="18" alt="correo de contacto" /></td>
-        <td>oficina_principal@provider.com.co</td>
+        <td>ventas@provider.com.co</td>
       </tr>
       <tr>
         <td><img src="recursos/direccion.JPG" width="18" height="18" alt="direccion de contacto" /></td>
-        <td>Dirección: Cr 4 14-50 Cali - Colombia</td>
+        <td>Dirección: Cr 4 14-50 Of. 815
+ Cali - Colombia</td>
       </tr>
     </table></td>
   </tr>

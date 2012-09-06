@@ -19,15 +19,18 @@ class LineasController extends AppController {
 	}
 
 	function view($id = null) {
-
+		
 		$this -> layout = "front";
 		$this -> Linea -> recursive = 2;
 		$this -> Linea -> Categoria -> unbindModel(array('hasMany' => array('Producto'), 'belongsTo' => array('Linea')));
+		
 		$this -> set('linea', $this -> Linea -> read(null, $id));
+		
 		$conditions = array();
+		$order = array('Producto.orden_en_categoria' => 'ASC');
+		
 		if (!isset($this -> params['named']['categoria'])) {
 			$categorias = $this -> Linea -> Categoria -> find('list', array('conditions' => array('Categoria.linea_id' => $id), 'fields' => array('id', 'id')));
-
 		} else {
 			$categorias = $this -> params['named']['categoria'];
 			$this -> Linea -> Categoria -> recursive = -1;
@@ -38,10 +41,17 @@ class LineasController extends AppController {
 			$conditions['Producto.subcategoria_id'] = $this -> params['named']['subcategoria'];
 			$this -> Linea -> Categoria -> Subcategoria -> recursive = -1;
 			$this -> set('subcategoria', $this -> Linea -> Categoria -> Subcategoria -> read(null, $this -> params['named']['subcategoria']));
+			$order = array('Producto.orden_en_subcategoria' => 'ASC');
 		}
 
 		$this -> loadModel('Producto');
-		$this -> paginate = array('Producto' => array('limit' => 2000, 'conditions' => $conditions));
+		$this -> paginate = array(
+			'Producto' => array(
+				'limit' => 2000, 
+				'conditions' => $conditions,
+				'order' => $order
+			)
+		);
 		$this -> set('productos', $this -> paginate('Producto'));
 	}
 
