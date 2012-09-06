@@ -41,7 +41,13 @@ class LineasController extends AppController {
 		}
 
 		$this -> loadModel('Producto');
-		$this -> paginate = array('Producto' => array('limit' => 2000, 'conditions' => $conditions));
+		$this -> paginate = array(
+			'Producto' => array(
+				'limit' => 2000, 
+				'conditions' => $conditions,
+				
+			)
+		);
 		$this -> set('productos', $this -> paginate('Producto'));
 	}
 

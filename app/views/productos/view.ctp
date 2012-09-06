@@ -55,12 +55,7 @@ a:active {
 
 			<div id="contenido" style="min-height:372px;">
 
-				<div id="contenido_linea">
-				 <?php echo $linea['Linea']['nombre'];?> 
-				  <?php if(isset($categoria)) echo " -> ".$categoria['Categoria']['nombre']; ?>
-				  <?php if(isset($subcategoria)) echo " -> ".$subcategoria['Subcategoria']['nombre']; ?>
-				  <?php echo " -> ".$producto['Producto']['nombre']; ?>
-				</div>
+				<?php echo $this -> element('contenido_linea');?>
 
 				<div id="contenido_sublinea" style="background:<?php echo $linea['Linea']['color']; ?>"></div>
 

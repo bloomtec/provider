@@ -22,7 +22,7 @@
 	<li class="top"><a href="/" id="Inicio" class="inicio"><span>Inicio</span></a></li>
 	<li class="top"><a href="nuestra_empresa" id="nuestra_empresa" class="nuestra"><span>Nuestra Empresa</span></a></li>
    	<li class="top"><a href="clientes" id="clientes" class="clientes"><span>Clientes</span></a></li>
-	  <li class="top"><a href="#" id="productos" class="productos"><span class="down">Productos</span></a>
+	  <li class="top"><a href="#" id="productos" class="productos"><span class="down" style='background:none;'>Productos</span></a>
 		  <ul class="sub">		
       <?php $lineas = $this -> requestAction("/lineas/get"); ?>	
       <?php foreach($lineas as $linea):?>

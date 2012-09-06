@@ -106,7 +106,7 @@ class PagesController extends AppController {
 		if(isset($this -> data['Email']) && !empty($this -> data['Email'])) {
 			debug($this -> data);
 			// multiple recipients
-			$to  = 'oficina_principal@provider.com.co'; //'oficina_principal@provider.com.co';
+			$to  = 'ventas@provider.com.co'; //'oficina_principal@provider.com.co';
 			
 			// subject
 			$subject = 'Sol. De Contacto :: ' . $this -> data['Email']['sub'];
@@ -178,8 +178,8 @@ class PagesController extends AppController {
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 			
 			// Additional headers
-			$headers .= 'To: Provider <oficina_principal@provider.com.co>' . "\r\n";
-			$headers .= 'From: Página de contacto PROVIDER <oficina_principal@provider.com.co>' . "\r\n";
+			$headers .= 'To: Provider <ventas@provider.com.co>' . "\r\n";
+			$headers .= 'From: Página de contacto PROVIDER <ventas@provider.com.co>' . "\r\n";
 			
 			// Mail it
 			mail($to, $subject, $message, $headers);
