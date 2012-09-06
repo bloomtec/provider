@@ -33,7 +33,7 @@ class Subcategoria extends AppModel {
 			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
+			'order' => array('orden_en_subcategoria' => 'ASC'),
 			'limit' => '',
 			'offset' => '',
 			'exclusive' => '',

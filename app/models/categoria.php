@@ -58,7 +58,7 @@ class Categoria extends AppModel {
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
+			'order' => array('orden_en_categoria' => 'ASC'),
 			'limit' => '',
 			'offset' => '',
 			'exclusive' => '',
