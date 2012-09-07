@@ -73,7 +73,7 @@
  */
 class DATABASE_CONFIG {
 
-	var $default = array(
+	var $production = array(
 		'driver' => 'mysql',
 		'persistent' => false,
 		//'host' => 'mysql.bloomweb.co',
@@ -84,7 +84,7 @@ class DATABASE_CONFIG {
 		'prefix' => '',
 	);
 	
-	var $production = array(
+	var $default = array(
 		'driver' => 'mysql',
 		'persistent' => false,
 		'host' => 'localhost',
